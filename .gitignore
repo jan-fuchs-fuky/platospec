@@ -1,0 +1,5 @@
+telescope/log/
+telescope/python/PlatoSpec/__pycache__/
+telescope/python/__pycache__/
+
+*.swp

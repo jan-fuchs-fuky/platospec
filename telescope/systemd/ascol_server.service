@@ -1,0 +1,23 @@
+[Unit]
+Description=ascol_server
+
+[Service]
+User=tcsuser
+StandardOutput=journal+console
+
+# Note: setting PYTHONUNBUFFERED is necessary to see the output of this service in the journal
+# See https://docs.python.org/2/using/cmdline.html#envvar-PYTHONUNBUFFERED
+Environment=PYTHONUNBUFFERED=true
+Environment=ICE_CONFIG=/opt/ascol_server/etc/ice_server.cfg
+
+# Adjust this line to the correct path to ascol_server.py
+ExecStart=/usr/bin/python3 /opt/ascol_server/bin/ascol_server.py
+
+# Note that we use Type=notify here since ascol_server.py will send "READY=1"
+# when it's finished starting up
+Type=notify
+NotifyAccess=all
+
+WatchdogSec=300
+RestartSec=5
+Restart=always
