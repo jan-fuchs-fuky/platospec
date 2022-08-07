@@ -38,6 +38,20 @@ class ASCOLClientCLI:
             status = self.telescope_proxy.get_status()
             print(status)
 
+            result = self.telescope_proxy.run_ascol("DOSO 1")
+            print("Dome Slit Open", result)
+
+            result = self.telescope_proxy.run_ascol("TESY 1")
+            print("Start east calibration procedures", result)
+
+            result = self.telescope_proxy.run_ascol("TSRA 120101.1 455959.9 0")
+            print("Set sky coordinates setpoint", result)
+            result = self.telescope_proxy.run_ascol("TGRA")
+            print("Move to the sky coordinates setpoint", result)
+
+            result = self.telescope_proxy.run_ascol("TSGM 1")
+            print("Turn on guiding mode", result)
+
 def main():
     ascol_client_cli = ASCOLClientCLI()
 
