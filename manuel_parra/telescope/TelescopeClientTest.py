@@ -70,21 +70,23 @@ class TelescopeClient():
                 traceback.print_exc()
 
     def wait(self, key, value, negate=False):
+        not_str = ""
 
-        for i in range(120):
+        for i in range(300):
             result = self.get_telescope_status()
 
             if negate:
+                not_str = " NOT"
                 if result[key] != value:
                     break
             else:
                 if result[key] == value:
                     break
 
-                if value.startswith("AUTO_") and result[key].startswith("AUTO_"):
+                if value == "AUTO_" and result[key].startswith("AUTO_"):
                     break
 
-            print("%s: Waiting on %s => %s" % (datetime.now(), key, value))
+            print("%s: Waiting on%s %s => %s" % (datetime.now(), not_str, key, value))
             time.sleep(1)
         else:
             raise Exception("Telescope timeout: %s %s" % (key, value))
@@ -105,17 +107,19 @@ class TelescopeClient():
             self.wait('global_state.telescope', 'OFF', negate=True)
 
             self.run_ascol('DOSO 1', 'Dome Slit Open')
+            self.wait('global_state.slit', 'OPENED')
+
             self.run_ascol('DOAM', 'Dome Automated')
             self.run_ascol('FMOP 1', 'Flap Mirror Open')
             self.run_ascol('TSCM 4', 'Set correction model to 4')
-            self.run_ascol('TESY 1', 'Telescope Synchronization East')
+            self.run_ascol('TESY 0', 'Telescope Synchronization West')
 
             required_state = [
-                ['global_state.slit', 'OPENED'],
                 ['global_state.dome', 'AUTO_'],
                 ['global_state.mirror_cover', 'OPENED'],
                 ['correction_model', '4'],
-                # TODO: TESY ['', ''],
+                ['ha_calibration', 'CALIBRATED'],
+                ['da_calibration', 'CALIBRATED'],
             ]
 
             for key, value in required_state:
@@ -140,22 +144,26 @@ class TelescopeClient():
         try:
             self.run_ascol('DOCO 0', 'Dome camera OFF')
             self.run_ascol('DOLO 0', 'Dome lamp OFF')
-            cmd = 'TSRA %s %s 0' % (ra, dec)
-            self.run_ascol(cmd, 'Telescope set RA/DEC East')
+            cmd = 'TSRA %s %s 1' % (ra, dec)
+            self.run_ascol(cmd, 'Telescope set RA/DEC West')
             self.run_ascol('TGRA', 'Telescope go RA/DEC')
+
+            time.sleep(3)
+            result = self.get_telescope_status()
+            if result['global_state.telescope'] == 'STOP':
+                raise Exception("Bad coordinates %s" % cmd)
+
             self.run_ascol('TSGM 1', 'Telescope set Guiding Mode On')
 
             required_state = [
                 ['global_state.telescope', 'TRACK'],
                 ['global_state.slit', 'OPENED'],
-                ['global_state.dome', 'AUTO_'],
                 ['global_state.mirror_cover', 'OPENED'],
+                ['global_state.dome', 'AUTO_STOP'],
                 ['correction_model', '4'],
                 ['correction_refraction_state', 'ON'],
                 ['correction_model_state', 'ON'],
                 ['dome_calibration', 'CALIBRATED'],
-                ['ha_calibration', 'CALIBRATED'],
-                ['da_calibration', 'CALIBRATED'],
                 ['dome_lamp', 'OFF'],
                 ['dome_camera_power', 'OFF'],
             ]
@@ -201,26 +209,23 @@ class TelescopeClient():
         print(msg)
 
         try:
-            self.run_ascol('TEST', 'Telescope Stop')
-            self.wait('global_state.telescope', 'STOP')
-
             self.run_ascol('TEPA', 'Telescope Park')
-            self.run_ascol('DOPA', 'Dome Park')
+
             self.run_ascol('FMOP 0', 'Flap Mirror Close')
+            self.wait('global_state.mirror_cover', 'CLOSED')
+
             self.run_ascol('DOSO 0', 'Dome Slit Close')
+            self.wait('global_state.slit', 'CLOSED')
+
+            self.run_ascol('DOPA', 'Dome Park')
 
             required_state = [
-                ['global_state.telescope', 'PARK'],
+                ['global_state.telescope', 'OFF'],
                 ['global_state.dome', 'STOP'],
-                ['global_state.slit', 'CLOSED'],
-                ['global_state.mirror_cover', 'CLOSED'],
             ]
 
             for key, value in required_state:
                 self.wait(key, value)
-
-            self.run_ascol('TEON 0', 'Telescope OFF')
-            self.wait('global_state.telescope', 'OFF')
 
             self.run_ascol('GLCV 0', 'Control Voltage OFF')
             self.wait('control_voltage', 'OFF')
@@ -426,7 +431,7 @@ if __name__ == "__main__":
     msg = 'Initialize telescope and track the MOON'
     print(msg)
     client.initialize()
-    client.start_tracking_source('234200.0', '-685300.0')
+    client.start_tracking_source('101000.0', '-285400.0')
 
     time.sleep(10.0)
 
