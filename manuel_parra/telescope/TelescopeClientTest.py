@@ -2,8 +2,11 @@ import Ice
 import PlatoSpec
 import sys
 import time
+import json
 import argparse
+import traceback
 
+from datetime import datetime, timezone
 
 class TelescopeClient():
 
@@ -45,18 +48,46 @@ class TelescopeClient():
                 raise RuntimeError("Invalid proxy")
         except:
             print('Unknown execption...')
+            traceback.print_exc()
+
+    def run_ascol(self, cmd, msg):
+        result = self.telescope_proxy.run_ascol(cmd)
+        print("Execute %s, cmd: %s, result: %s" % (msg, cmd, result))
+        if 'ERR' == result:
+            raise Exception("Fail during %s" % msg)
 
     def disconnect(self):
         '''
         Disconnect from Telescope ICE server object.
         '''
-        msg = 'Desconnecting from Telescope server...'
+        msg = 'Disconnecting from Telescope server...'
         print(msg)
         if self.communicator:
             try:
                 self.communicator.destroy()
             except:
                 print('Unknown execption...')
+                traceback.print_exc()
+
+    def wait(self, key, value, negate=False):
+
+        for i in range(120):
+            result = self.get_telescope_status()
+
+            if negate:
+                if result[key] != value:
+                    break
+            else:
+                if result[key] == value:
+                    break
+
+                if value.startswith("AUTO_") and result[key].startswith("AUTO_"):
+                    break
+
+            print("%s: Waiting on %s => %s" % (datetime.now(), key, value))
+            time.sleep(1)
+        else:
+            raise Exception("Telescope timeout: %s %s" % (key, value))
 
     def initialize(self):
         '''
@@ -66,36 +97,29 @@ class TelescopeClient():
         print(msg)
 
         try:
-            # Dome Slit Open
-            result = self.telescope_proxy.run_ascol('DOSO 1\r\n')
-            msg = 'Execute Dome Slit Open, result: %s' % str(result)
-            print(msg)
-            if 'ERR' in result:
-                msg = 'Fail during Dome Slit Open'
-                print(msg)
+            self.run_ascol('GLCV 1', 'Control Voltage ON')
+            self.wait('control_voltage', 'ON')
+            self.wait('error_flag', 'OFF')
 
-                return False
+            self.run_ascol('TEON 1', 'Telescope ON')
+            self.wait('global_state.telescope', 'OFF', negate=True)
 
-            # Dome Automated
-            result = self.telescope_proxy.run_ascol('DOAM\r\n')
-            msg = 'Execute Dome Automated, result: %s' % str(result)
-            print(msg)
-            if 'ERR' in result:
-                msg = 'Fail during Dome Automated'
-                print(msg)
+            self.run_ascol('DOSO 1', 'Dome Slit Open')
+            self.run_ascol('DOAM', 'Dome Automated')
+            self.run_ascol('FMOP 1', 'Flap Mirror Open')
+            self.run_ascol('TSCM 4', 'Set correction model to 4')
+            self.run_ascol('TESY 1', 'Telescope Synchronization East')
 
-                return False
+            required_state = [
+                ['global_state.slit', 'OPENED'],
+                ['global_state.dome', 'AUTO_'],
+                ['global_state.mirror_cover', 'OPENED'],
+                ['correction_model', '4'],
+                # TODO: TESY ['', ''],
+            ]
 
-            # Telescope Synchronization East
-            result = self.telescope_proxy.run_ascol('TESY 1\r\n')
-            msg = 'Execute Telescope Synchronization East, result: %s' % str(
-                result)
-            print(msg)
-            if 'ERR' in result:
-                msg = 'Fail during Telescope Synchronization East'
-                print(msg)
-
-                return False
+            for key, value in required_state:
+                self.wait(key, value)
 
             msg = 'TCS initialize procedure is ready'
             print(msg)
@@ -103,6 +127,7 @@ class TelescopeClient():
             return True
         except:
             print('Unknown execption...')
+            traceback.print_exc()
 
     def start_tracking_source(self, ra, dec):
         '''
@@ -113,44 +138,39 @@ class TelescopeClient():
         print(msg)
 
         try:
-            # Telescope set RA/DEC East
-            cmd = 'TSRA %s %s 0\r\n' % (ra, dec)
-            result = self.telescope_proxy.run_ascol(cmd)
-            msg = 'Execute Telescope set RA/DEC East, result: %s' % str(result)
-            print(msg)
-            if 'ERR' in result:
-                msg = 'Fail during Telescope set RA/DEC East'
-                print(msg)
+            self.run_ascol('DOCO 0', 'Dome camera OFF')
+            self.run_ascol('DOLO 0', 'Dome lamp OFF')
+            cmd = 'TSRA %s %s 0' % (ra, dec)
+            self.run_ascol(cmd, 'Telescope set RA/DEC East')
+            self.run_ascol('TGRA', 'Telescope go RA/DEC')
+            self.run_ascol('TSGM 1', 'Telescope set Guiding Mode On')
 
-                return False
+            required_state = [
+                ['global_state.telescope', 'TRACK'],
+                ['global_state.slit', 'OPENED'],
+                ['global_state.dome', 'AUTO_'],
+                ['global_state.mirror_cover', 'OPENED'],
+                ['correction_model', '4'],
+                ['correction_refraction_state', 'ON'],
+                ['correction_model_state', 'ON'],
+                ['dome_calibration', 'CALIBRATED'],
+                ['ha_calibration', 'CALIBRATED'],
+                ['da_calibration', 'CALIBRATED'],
+                ['dome_lamp', 'OFF'],
+                ['dome_camera_power', 'OFF'],
+            ]
 
-            # Telescope go RA/DEC
-            result = self.telescope_proxy.run_ascol('TGRA\r\n')
-            msg = 'Execute Telescope go RA/DEC, result: %s' % str(result)
-            print(msg)
-            if 'ERR' in result:
-                msg = 'Fail during Telescope go RA/DEC'
-                print(msg)
-
-                return False
-
-            # Telescope set Guiding Mode On
-            result = self.telescope_proxy.run_ascol('TSGM 1\r\n')
-            msg = 'Execute Telescope set Guiding Mode On, result: %s' % str(
-                result)
-            print(msg)
-            if 'ERR' in result:
-                msg = 'Fail during Telescope set Guiding Mode On'
-                print(msg)
-
-                return False
+            for key, value in required_state:
+                self.wait(key, value)
 
             msg = 'TCS start tracking source procedure is ready'
             print(msg)
 
             return True
+
         except:
             print('Unknown execption...')
+            traceback.print_exc()
 
     def stop_tracking_source(self):
         '''
@@ -160,26 +180,10 @@ class TelescopeClient():
         print(msg)
 
         try:
-            # Telescope set Guiding Mode Off
-            result = self.telescope_proxy.run_ascol('TSGM 0\r\n')
-            msg = 'Execute Telescope set Guiding Mode Off, result: %s' % str(
-                result)
-            print(msg)
-            if 'ERR' in result:
-                msg = 'Fail during Telescope set Guiding Mode Off'
-                print(msg)
+            self.run_ascol('TSGM 0', 'Telescope set Guiding Mode Off')
+            self.run_ascol('TEST', 'Telescope Stop')
 
-                return False
-
-            # Telescope stop
-            result = self.telescope_proxy.run_ascol('TEST\r\n')
-            msg = 'Execute Telescope Stop, result: %s' % str(result)
-            print(msg)
-            if 'ERR' in result:
-                msg = 'Fail during Telescope Stop'
-                print(msg)
-
-                return False
+            self.wait('global_state.telescope', 'STOP')
 
             msg = 'TCS stop tracking source procedure is ready'
             print(msg)
@@ -187,6 +191,7 @@ class TelescopeClient():
             return True
         except:
             print('Unknown execption...')
+            traceback.print_exc()
 
     def shutdown(self):
         '''
@@ -196,45 +201,29 @@ class TelescopeClient():
         print(msg)
 
         try:
-            # Telescope stop
-            result = self.telescope_proxy.run_ascol('TEST\r\n')
-            msg = 'Execute Telescope Stop, result: %s' % str(result)
-            print(msg)
-            if 'ERR' in result:
-                msg = 'Fail during Telescope Stop'
-                print(msg)
+            self.run_ascol('TEST', 'Telescope Stop')
+            self.wait('global_state.telescope', 'STOP')
 
-                return False
+            self.run_ascol('TEPA', 'Telescope Park')
+            self.run_ascol('DOPA', 'Dome Park')
+            self.run_ascol('FMOP 0', 'Flap Mirror Close')
+            self.run_ascol('DOSO 0', 'Dome Slit Close')
 
-            # Telescope park
-            result = self.telescope_proxy.run_ascol('TEPA\r\n')
-            msg = 'Execute Telescope Park, result: %s' % str(result)
-            print(msg)
-            if 'ERR' in result:
-                msg = 'Fail during Telescope Park'
-                print(msg)
+            required_state = [
+                ['global_state.telescope', 'PARK'],
+                ['global_state.dome', 'STOP'],
+                ['global_state.slit', 'CLOSED'],
+                ['global_state.mirror_cover', 'CLOSED'],
+            ]
 
-                return False
+            for key, value in required_state:
+                self.wait(key, value)
 
-            # Dome Park
-            result = self.telescope_proxy.run_ascol('DOPA\r\n')
-            msg = 'Execute Dome Park, result: %s' % str(result)
-            print(msg)
-            if 'ERR' in result:
-                msg = 'Fail during Dome Park'
-                print(msg)
+            self.run_ascol('TEON 0', 'Telescope OFF')
+            self.wait('global_state.telescope', 'OFF')
 
-                return False
-
-            # Dome Slit Close
-            result = self.telescope_proxy.run_ascol('DOSO 0\r\n')
-            msg = 'Execute Dome Slit Close, result: %s' % str(result)
-            print(msg)
-            if 'ERR' in result:
-                msg = 'Fail during Dome Slit Close'
-                print(msg)
-
-                return False
+            self.run_ascol('GLCV 0', 'Control Voltage OFF')
+            self.wait('control_voltage', 'OFF')
 
             msg = 'TCS shutdown procedure is ready'
             print(msg)
@@ -242,18 +231,160 @@ class TelescopeClient():
             return True
         except:
             print('Unknown execption...')
+            traceback.print_exc()
 
     def get_telescope_status(self):
         '''
-        Return Telescope RA/DEC position.
+        Return Telescope status.
         '''
         telescope_status = self.telescope_proxy.get_status()
-        coordinates = telescope_status.coordinates
-
         result = {}
-        result['ra'] = coordinates.ra
-        result['dec'] = coordinates.dec
-        result['position'] = coordinates.position
+
+        status_keys = [
+            "utc",
+            "speed1",
+            "speed2",
+            "speed3",
+            "dec_screw_limit",
+            "dome_position",
+            "focus_position",
+            "correction_model",
+            "global_state.telescope",
+            "global_state.dome",
+            "global_state.slit",
+            "global_state.mirror_cover",
+            "global_state.focus",
+            "global_state.status_bits",
+            "global_state.error_bits",
+            "user_offsets.ra",
+            "user_offsets.dec",
+            "autoguider_offsets.ra",
+            "autoguider_offsets.dec",
+            "user_speeds.ra",
+            "user_speeds.dec",
+            "user_speeds.active",
+            "coordinates.ra",
+            "coordinates.dec",
+            "coordinates.position",
+            "setpoint.ra",
+            "setpoint.dec",
+            "setpoint.position",
+            "axes.ha",
+            "axes.da",
+            "meteo_status.humidity",
+            "meteo_status.precipitation",
+            "meteo_status.status_word",
+            "meteo_status.meteo_alarms",
+            "meteo_status.wind_direction",
+            "meteo_status.wind_speed",
+            "meteo_status.brightness_east",
+            "meteo_status.brightness_north",
+            "meteo_status.brightness_west",
+            "meteo_status.brightness_south",
+            "meteo_status.brightness_max",
+            "meteo_status.temperature",
+            "meteo_status.atmospheric_pressure",
+            "meteo_status.pyrgeometer",
+        ]
+
+        global_state2str = {
+            "global_state.telescope": ["OFF", "STOP", "TRACK", "SLEW", "SLEWHADA", "SYNC", "PARK"],
+            "global_state.slit": ["UNKNOWN", "OPENING", "CLOSING", "OPENED", "CLOSED"],
+            "global_state.mirror_cover": ["UNKNOWN", "OPENING", "CLOSING", "OPENED", "CLOSED"],
+            "global_state.dome": ["STOP", "PLUS", "MINUS", "AUTO_STOP", "AUTO_PLUS", "AUTO_MINUS", "SYNC", "SLEW_MINUS", "SLEW_PLUS", "SLIT"],
+            "global_state.focus": ["STOPPED", "MANUAL-", "MANUAL+", "POSITIONING"],
+        }
+
+        meteo_units = {
+            "meteo_status.humidity": "%",
+            #"meteo_status.precipitation": "",
+            "meteo_status.wind_direction": "°",
+            "meteo_status.wind_speed": "m/s",
+            "meteo_status.brightness_east": "kLux",
+            "meteo_status.brightness_north": "kLux",
+            "meteo_status.brightness_west": "kLux",
+            "meteo_status.brightness_south": "kLux",
+            "meteo_status.brightness_max": "kLux",
+            "meteo_status.temperature": "°C",
+            "meteo_status.atmospheric_pressure": "mbar",
+            "meteo_status.pyrgeometer": "W/㎡",
+        }
+
+        for key in status_keys:
+            value = telescope_status
+            for name in key.split("."):
+                if not hasattr(value, name):
+                    raise Exception("ICE value '%s' not found (name = %s)" % (key, name))
+                value = getattr(value, name)
+
+            if key == "utc":
+                value = str(datetime.fromtimestamp(value, tz=timezone.utc))
+
+            suffix = ""
+            if key in meteo_units:
+                suffix = " %s" % meteo_units[key]
+
+            if key in global_state2str:
+                try:
+                    value = global_state2str[key][value]
+                except:
+                    value = "UNKNOWN"
+
+            result[key] = "%s%s" % (value, suffix)
+
+        status_bits2str = {
+              0: ["OFF", "ON", "remote_mode"],                       #  0 System is in REMOTE mode
+              1: ["OFF", "ON", "control_voltage"],                   #  1 Control voltage is turned on
+              2: ["UNCALIBRATED", "CALIBRATED", "ha_calibration"],   #  2 HA axis is calibrated
+              3: ["UNCALIBRATED", "CALIBRATED", "da_calibration"],   #  3 DEC axis is calibrated
+              4: ["UNCALIBRATED", "CALIBRATED", "dome_calibration"], #  4 Dome is calibrated
+              5: ["OFF", "ON", "correction_refraction_state"],       #  5 Correction of refraction is turned on
+              6: ["OFF", "ON", "correction_model_state"],            #  6 Correction model function is turned on
+              7: ["OFF", "ON", "tracking"],                          #  7 Guide mode is turned on
+              8: ["", "MOVE", None],                                 #  8 Focusing is in move
+              9: ["OFF", "ON", "dome_lamp"],                         #  9 Dome light is on
+              10: ["OFF", "ON", "vent_tube_state"],                  # 10 Vent on tube is on
+              11: ["LOCKED", "UNLOCKED", "ha_lock"],                 # 11 HA axis unlocked
+              12: ["LOCKED", "UNLOCKED", "da_lock"],                 # 12 DEC axis unlocked
+              13: ["OFF", "ON", "dome_camera_power"],                # 13 Dome camera is on
+        }
+
+        for shift in range(14):
+            value = (telescope_status.global_state.status_bits >> shift) & 1
+            label = status_bits2str[shift][2]
+            if label is not None:
+                result[label] = status_bits2str[shift][value]
+
+        error_bits2str = {
+            0: "Error of motor or regulation of HA",
+            1: "Error of motor or regulation of DA",
+            2: "Negative restriction of HA",
+            3: "Positive restriction of HA",
+            4: "Negative restriction of DA",
+            5: "Positive restriction of DA",
+            6: "general error",
+            7: "telescope error",
+            8: "dome or slit error",
+            9: "focus error",
+            10: "meteo error",
+        }
+
+        errors = []
+        error_flag = False
+        for shift in range(11):
+            value = (telescope_status.global_state.error_bits >> shift) & 1
+            if value:
+                error_flag = True
+                error_msg = error_bits2str[shift]
+                errors.append(error_msg)
+                print("Telescope error: %s" % error_msg)
+
+        if error_flag:
+            #raise Exception("Telescope errors: %s" % ", ".join(errors))
+            result["error_flag"] = "ON"
+        else:
+            print("Telescope Alright")
+            result["error_flag"] = "OFF"
 
         return result
 
@@ -288,16 +419,16 @@ if __name__ == "__main__":
     print(msg)
 
     telescope_status = client.get_telescope_status()
-    msg = 'Telescope initial status: %s' % str(telescope_status)
+    msg = 'Telescope initial status:'
     print(msg)
+    print(json.dumps(telescope_status, indent=4, default=str))
 
-    '''
     msg = 'Initialize telescope and track the MOON'
     print(msg)
     client.initialize()
-    client.start_tracking_source('164742.3', '362837.9')
+    client.start_tracking_source('234200.0', '-685300.0')
 
-    time.sleep(60.0)
+    time.sleep(10.0)
 
     msg = 'Reading Telescope status'
     print(msg)
@@ -305,12 +436,13 @@ if __name__ == "__main__":
     telescope_status = client.get_telescope_status()
     msg = 'Telescope initial status: %s' % str(telescope_status)
     print(msg)
+    print(json.dumps(telescope_status, indent=4, default=str))
 
     weather_status = client.get_weather_status()
     msg = 'Wheather initial status: %s' % str(weather_status)
     print(msg)
 
-    time.sleep(60.0)
+    time.sleep(10.0)
 
     msg = 'Stop source tracking and Shutdown telescope'
     print(msg)
@@ -320,6 +452,6 @@ if __name__ == "__main__":
     telescope_status = client.get_telescope_status()
     msg = 'Telescope initial status: %s' % str(telescope_status)
     print(msg)
-    '''
+    print(json.dumps(telescope_status, indent=4, default=str))
 
     client.disconnect()

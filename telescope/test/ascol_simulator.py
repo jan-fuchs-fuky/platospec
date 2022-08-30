@@ -6,6 +6,7 @@
 #
 # Copyright (C) 2022 Astronomical Institute, Academy Sciences of the Czech Republic, v.v.i.
 #
+# GLCV (GLobal Control Voltage control)
 # GLVE (Global Version)
 # GLLG (Global LoGin)
 # GLLL (GLobal read Latitude and Longitude)
@@ -102,6 +103,7 @@ class AscolState:
         self.ra = "171436.983"
         self.dec = "-291600.57"
         self.position = "0"
+        self.voltage = 0
         self.power = 0
         self.correction_model = 1
         self.setpoint_ra = self.ra
@@ -218,6 +220,11 @@ class AscolState:
     # TRCM (Telescope Read Correction of telescope Model)
     def cmd_trcm(self):
         return self.correction_model
+
+    # GLCV (GLobal Control Voltage control)
+    def cmd_glcv(self, voltage):
+        self.voltage = voltage
+        return voltage
 
     # TEON (TElescope ON/off)
     def cmd_teon(self, power):
