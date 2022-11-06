@@ -9,6 +9,10 @@ Ground-based support for exoplanetary space missions.
 
 ![Pucheros Expose GUI](doc/screenshot/pucheros_expose_gui.png)
 
+## Telescope Control GUI
+
+![Telescope Control GUI](doc/screenshot/telescope_control_gui.png)
+
 ## Usage
 
 Set paths **IceSSL.CAs** and **IceSSL.CertFile** in **etc/ice\_client.cfg** and **etc/ice\_server.cfg**.
