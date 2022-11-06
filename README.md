@@ -1,6 +1,14 @@
 # platospec
 Ground-based support for exoplanetary space missions.
 
+## Pucheros Autoguider
+
+![Pucheros Autoguider GUI](doc/screenshot/pucheros_autoguider_gui.png)
+
+## Pucheros Expose
+
+![Pucheros Expose GUI](doc/screenshot/pucheros_expose_gui.png)
+
 ## Usage
 
 Set paths **IceSSL.CAs** and **IceSSL.CertFile** in **etc/ice\_client.cfg** and **etc/ice\_server.cfg**.
