@@ -84,14 +84,18 @@
 #
 
 import os
+import re
 import sys
 import requests
 import time
 import logging
 import threading
 import traceback
+import subprocess
+import multiprocessing
 import socketio
 
+from subprocess import call, Popen, PIPE
 from datetime import datetime, timezone, timedelta
 from logging.handlers import RotatingFileHandler
 from enum import Enum
@@ -102,6 +106,7 @@ from PyQt5 import (
 )
 
 from PyQt5.QtGui import QBrush, QColor
+from PyQt5.QtMultimedia import QSound
 
 from PyQt5.QtWidgets import (
     QMessageBox,
@@ -140,6 +145,7 @@ sys.path.append(SCRIPT_PATH)
 PUCHEROS_EXPOSE_UI = "%s/../share/pucheros_expose.ui" % SCRIPT_PATH
 PUCHEROS_EXPOSE_CFG = "%s/../etc/pucheros_expose.cfg" % SCRIPT_PATH
 PUCHEROS_EXPOSE_LOG = "%s/../log/pucheros_expose_%%s.log" % SCRIPT_PATH
+PUCHEROS_EXPOSE_SOUNDS = "%s/../sounds" % SCRIPT_PATH
 
 def init_logger(logger, filename):
     formatter = logging.Formatter("%(asctime)s - %(name)s[%(process)d][%(thread)d] - %(levelname)s - %(message)s")
@@ -241,6 +247,113 @@ class Worker(QRunnable):
             self.thread_exit.set()
             self.signals.finished.emit(self.kwargs["name"]) # Done
 
+class RsyncThread:
+
+    def __init__(self, gui):
+        self.gui = gui
+        self.is_stop = gui.is_stop
+
+    def rsync_progress(self, msg, color):
+        dt_str = datetime.now().strftime("%H:%M:%S")
+
+        data = {
+            "msg": "%s - %s" % (dt_str, msg),
+            "color": color,
+        }
+
+        self.progress_callback.emit(self.name, data)
+
+    # /usr/bin/ds9 -title pucheros
+    def ds9_xpaset(self, filename):
+        cmd = [self.xpaset_bin, "-p", self.ds9_title, "file", filename]
+        self.logger.info(cmd)
+
+        try:
+            output = subprocess.check_output(cmd)
+        except:
+            self.logger.exception("xpaset failed")
+
+    def call_cmd(self, cmd):
+        self.logger.info("command = %s" % cmd)
+
+        # WARNING: pokud je shell=True tak se odesle SIGTERM/SIGKILL shellu,
+        # ale ne potomku, ktery provadi vlastni stahovani
+        pipe = Popen(cmd)
+        retcode = None
+        while retcode is None:
+            retcode = pipe.poll()
+            self.rsync_progress("RUNNING", "#CCFFCC")
+            time.sleep(1)
+
+        if (retcode != 0):
+            self.logger.error("Call command failed: %i" % retcode)
+            self.rsync_progress("FAILED %i" % retcode, "#FFCCCC")
+            return
+
+        self.logger.info("Call command was successful")
+        self.rsync_progress("SUCCESS", "#CCFFCC")
+
+    def get_last_fits(self, data_dir):
+
+        for filename in reversed(sorted(os.listdir(data_dir))):
+            if not filename.endswith(".fits"):
+                continue
+
+            return os.path.join(data_dir, filename)
+
+    def run_rsync(self):
+        local_data_dir = "/data/pucheros_sci/"
+
+        while not self.gui.exit.is_set():
+            night_dt = datetime.utcnow()
+
+            if night_dt.hour > 18:
+                night_dt = night_dt + timedelta(days=1)
+
+            yyyy_mm_dd = night_dt.strftime("%Y-%m-%d")
+
+            cmd = [
+                "rsync",
+                "-a",
+                "pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/%s" % yyyy_mm_dd,
+                local_data_dir,
+            ]
+
+            if self.rsync_event.is_set():
+                self.rsync_event.clear()
+                self.call_cmd(cmd)
+
+                filename = self.get_last_fits(os.path.join(local_data_dir, yyyy_mm_dd))
+                if filename:
+                    self.ds9_xpaset(filename)
+            else:
+                self.rsync_progress("WAITING", "#CCCCCC")
+
+            time.sleep(1)
+
+    def run(self, progress_callback, name, rsync_event, xpaset_bin, ds9_title):
+        time.sleep(5)
+        self.progress_callback = progress_callback
+        self.name = name
+        self.rsync_event = rsync_event
+        self.xpaset_bin = xpaset_bin
+        self.ds9_title = ds9_title
+
+        self.logger = logging.getLogger(name)
+        init_logger(self.logger, PUCHEROS_EXPOSE_LOG % name)
+        self.logger.info("Starting process '%s'" % name)
+
+        while not self.gui.exit.is_set():
+            try:
+                self.run_rsync()
+            except:
+                self.logger.exception("rsync failed")
+                self.rsync_progress("ERROR: %s" % traceback.format_exc(), "#FFCCCC")
+                self.rsync_event.set()
+                time.sleep(5)
+
+        return "Done."
+
 class ExposeThread:
     sio = socketio.Client()
     pucheros_connect = False
@@ -317,6 +430,7 @@ class ExposeThread:
 
             if command["object"] == "target":
                 pucheros_expose.run_science(command["exposure_time"], command["target"])
+                self.rsync_event.set()
                 if command["comp_after_every_exposure"]:
                     data = {
                         "expose_number": counter,
@@ -331,6 +445,7 @@ class ExposeThread:
             elif command["object"] == "zero":
                 pucheros_expose.run_bias()
 
+            self.rsync_event.set()
             time.sleep(1)
 
     def run_read(self):
@@ -358,9 +473,10 @@ class ExposeThread:
 
             self.progress_callback.emit("msg", {"msg": status})
 
-    def run(self, progress_callback, name, command):
+    def run(self, progress_callback, name, command, rsync_event):
         self.progress_callback = progress_callback
         self.name = name
+        self.rsync_event = rsync_event
 
         self.logger = logging.getLogger(name)
         init_logger(self.logger, PUCHEROS_EXPOSE_LOG % name)
@@ -480,6 +596,24 @@ class PucherosExposeUI(QMainWindow):
     def __init__(self):
         super(PucherosExposeUI, self).__init__()
 
+        self.xpaset_bin = "/usr/bin/xpaset"
+        self.ds9_bin = "/usr/bin/ds9"
+        self.ds9_title = "pucheros"
+        self.ds9_processes = []
+
+        self.run_ds9()
+        time.sleep(1)
+
+        self.sounds = {}
+        self.sounds["error"] = QSound(os.path.join(PUCHEROS_EXPOSE_SOUNDS, "error.wav"))
+        self.sounds["set"] = QSound(os.path.join(PUCHEROS_EXPOSE_SOUNDS, "set.wav"))
+        self.sounds["new_image"] = QSound(os.path.join(PUCHEROS_EXPOSE_SOUNDS, "new_image.wav"))
+
+        self.sounds_enabled = {}
+        self.sounds_enabled["error"] = True
+        self.sounds_enabled["set"] = True
+        self.sounds_enabled["new_image"] = True
+
         self.status_color = {
             "IDLE": "#CCCCCC",
             "RUNNING": "#CCFFCC",
@@ -489,6 +623,14 @@ class PucherosExposeUI(QMainWindow):
 
         self.expose_number = 0
         self.exposure_time = 0
+
+        # FITs header: Note that the header unit may only contain ASCII text
+        # characters ranging from hexadecimal 20 to 7E); non-printing ASCII
+        # characters such as tabs, carriage-returns, or line-feeds are not allowed
+        # anywhere within the header unit.
+        #
+        # http://fits.gsfc.nasa.gov/fits_primer.html
+        self.fits_header_pattern = re.compile('^[\x20-\x7E]{1,68}$')
 
         process_name = "gui"
         self.logger = logging.getLogger("pucheros_expose_%s" % process_name)
@@ -500,10 +642,11 @@ class PucherosExposeUI(QMainWindow):
 
         self.exit = threading.Event()
         self.stop_event = threading.Event()
+        self.rsync_event = threading.Event()
         self.status = ClientStatus.IDLE
 
         self.thread_exit = {}
-        for key in ["expose_read", "expose_command"]:
+        for key in ["expose_read", "expose_command", "rsync"]:
             self.thread_exit[key] = threading.Event()
             self.thread_exit[key].set()
 
@@ -512,6 +655,7 @@ class PucherosExposeUI(QMainWindow):
         self.progress_callback_dict = {
             "expose_command": self.progress_expose_command_fn,
             "expose_read": self.progress_expose_read_fn,
+            "rsync": self.progress_rsync_fn,
         }
 
         self.start_BT.clicked.connect(self.start_clicked)
@@ -531,6 +675,9 @@ class PucherosExposeUI(QMainWindow):
         self.resize(640, 1024)
 
         self.start_expose_read_thread()
+        self.start_rsync_thread()
+
+        self.play("set")
         self.show()
 
     def set_enabled_widgets(self, widgets, value):
@@ -562,6 +709,27 @@ class PucherosExposeUI(QMainWindow):
         if current_object in exposure_time:
             self.exposure_time_SB.setValue(exposure_time[current_object])
 
+    def start_rsync_thread(self):
+        if not self.thread_exit["rsync"].is_set():
+            return
+
+        self.rsync_event.set()
+        self.thread_exit["rsync"].clear()
+
+        kwargs = {
+            "name": "rsync",
+            "gui": self,
+            "rsync_event": self.rsync_event,
+            "xpaset_bin": self.xpaset_bin,
+            "ds9_title": self.ds9_title,
+            "thread_exit": self.thread_exit["rsync"],
+        }
+
+        self.rsync_thread = RsyncThread(self)
+        rsync_worker = Worker(self.rsync_thread.run, **kwargs)
+
+        self.threadpool.start(rsync_worker)
+
     def start_expose_read_thread(self):
         self.exit.clear()
         self.stop_event.clear()
@@ -571,6 +739,7 @@ class PucherosExposeUI(QMainWindow):
             "name": "expose_read",
             "gui": self,
             "command": None,
+            "rsync_event": self.rsync_event,
             "thread_exit": self.thread_exit["expose_read"],
         }
 
@@ -588,6 +757,7 @@ class PucherosExposeUI(QMainWindow):
             "name": "expose_command",
             "gui": self,
             "command": command,
+            "rsync_event": self.rsync_event,
             "thread_exit": self.thread_exit["expose_command"],
         }
 
@@ -609,9 +779,40 @@ class PucherosExposeUI(QMainWindow):
 
         self.log("run %s" % action)
 
+    def show_msg(self, msg, category="info"):
+        category2icon = {
+            "question": QMessageBox.Question,
+            "info": QMessageBox.Information,
+            "warning": QMessageBox.Warning,
+            "error": QMessageBox.Critical,
+        }
+
+        icon = QMessageBox.NoIcon
+        if category in category2icon:
+            icon = category2icon[category]
+
+        msg_box = QMessageBox()
+        msg_box.setIcon(icon)
+        msg_box.setText(msg)
+        msg_box.setWindowTitle("Expose: %s" % category)
+        msg_box.setStandardButtons(QMessageBox.Ok)
+        msg_box.exec()
+
     def start_clicked(self):
         if not self.thread_exit["expose_command"].is_set():
             self.log("Action already run", level="warning")
+            return
+
+        self.target_LE.setText(self.target_LE.text().replace(' ', '_'))
+
+        match = self.fits_header_pattern.search(self.target_LE.text())
+        if not match:
+            msg = ("Target format must be:\n\n"
+                   "- ASCII text characters ranging from hexadecimal 20 to 7E\n"
+                   "- max length is 68 characters\n"
+                   "- min length is 1 character")
+
+            self.show_msg(msg, "error")
             return
 
         command = {
@@ -637,6 +838,13 @@ class PucherosExposeUI(QMainWindow):
 
         label.setText(text)
         label.setStyleSheet("background-color: %s;" % color)
+
+    def progress_rsync_fn(self, data):
+        msg = data["msg"]
+        self.set_label_text(self.rsync_LB, msg, data["color"])
+
+        if msg.find("SUCCESS") != -1 or msg.find("FAILED") != -1:
+            self.play("new_image")
 
     def progress_expose_command_fn(self, data):
         self.expose_number = data["expose_number"]
@@ -714,6 +922,10 @@ class PucherosExposeUI(QMainWindow):
         #if name == "expose_read":
         #    self.start_expose_read_thread()
 
+        if name == "rsync":
+            self.set_label_text(self.rsync_LB, "STOPPED", "#FFCCCC")
+            self.start_rsync_thread()
+
     def is_stop(self):
 
         if self.exit.is_set() or self.stop_event.is_set():
@@ -768,6 +980,25 @@ class PucherosExposeUI(QMainWindow):
             self.logger.warning(message)
         else:
             self.logger.info(message)
+
+    def play(self, name):
+        if self.sounds_enabled[name]:
+            self.sounds[name].play()
+
+    def fce_ds9_process(self, ds9_bin, title):
+        cmd = [ds9_bin, "-title", title]
+
+        subprocess.call(cmd)
+
+    def run_ds9(self):
+        try:
+            if self.ds9_bin:
+                process = multiprocessing.Process(target=self.fce_ds9_process, args=(self.ds9_bin, self.ds9_title))
+                process.start()
+
+                self.ds9_processes.append(process)
+        except:
+            self.logger.exception("ds9 failed")
 
 def main():
     app = QApplication([])
