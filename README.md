@@ -4,6 +4,7 @@ Ground-based support for exoplanetary space missions.
 ## Pucheros Autoguider
 
 ![Pucheros Autoguider GUI](doc/screenshot/pucheros_autoguider_gui.png)
+![Pucheros Autoguider GUI Scan](doc/screenshot/pucheros_autoguider_gui_scan.png)
 
 ## Pucheros Expose
 
