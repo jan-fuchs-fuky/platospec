@@ -5,6 +5,40 @@ Ground-based support for exoplanetary space missions.
 workstation$ git clone https://github.com/jan-fuchs-fuky/platospec.git platospec
 ```
 
+## Dependencies
+
+Download INDI Core Library from https://github.com/indilib/indi and install:
+
+```
+# apt install git cdbs dkms cmake fxload libev-dev libgps-dev libgsl-dev libraw-dev \
+libusb-dev zlib1g-dev libftdi-dev libgsl0-dev libjpeg-dev libkrb5-dev libnova-dev \
+libtiff-dev libfftw3-dev librtlsdr-dev libcfitsio-dev libgphoto2-dev build-essential \
+libusb-1.0-0-dev libdc1394-22-dev libboost-regex-dev libcurl4-gnutls-dev libtheora-dev \
+libnova-dev libfftw3-dev
+
+$ unzip indi-master.zip
+$ mkdir libindi_build
+$ cd libindi_build
+$ cmake -DCMAKE_INSTALL_PREFIX=/usr . ../indi-master
+$ make
+# make install
+```
+
+Download pyindi-client from https://github.com/indilib/pyindi-client and install:
+
+```
+# python3 setup.py install
+```
+
+Install:
+
+```
+# apt install libpython3.9-minimal python3-astroplan python3-astropy python3-astroquery \
+libpython3.9-stdlib python3-opencv python3-dbus python3-humanize python3-zeroc-ice \
+python3-matplotlib python3-numpy python3-pexpect python3-photutils python3-pyqt5 \
+python3-requests python3-sdnotify python3-skimage python3-socketio
+```
+
 ## Pucheros Autoguider GUI
 
 ### Run
@@ -60,7 +94,7 @@ workstation$ ./platospec/e152_watchdog/bin/e152_watchdog.py
 
 ![E152 Watchdog GUI](doc/screenshot/e152_watchdog_gui.png)
 
-## Usage
+## Usage ASCOL simulator
 
 Set paths **IceSSL.CAs** and **IceSSL.CertFile** in **etc/ice\_client.cfg** and **etc/ice\_server.cfg**.
 Certificates and keys for testing purpose are in directory **ssl**.
