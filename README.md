@@ -36,7 +36,8 @@ Install:
 # apt install libpython3.9-minimal python3-astroplan python3-astropy python3-astroquery \
 libpython3.9-stdlib python3-opencv python3-dbus python3-humanize python3-zeroc-ice \
 python3-matplotlib python3-numpy python3-pexpect python3-photutils python3-pyqt5 \
-python3-requests python3-sdnotify python3-skimage python3-socketio
+python3-requests python3-sdnotify python3-skimage python3-socketio rsync saods9 \
+xpa-tools
 ```
 
 ## Pucheros Autoguider GUI
