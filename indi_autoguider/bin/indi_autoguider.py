@@ -90,7 +90,7 @@ import Ice
 
 from operator import methodcaller
 from enum import Enum
-from datetime import datetime, timedelta
+from datetime import datetime, timezone, timedelta
 
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
@@ -102,10 +102,25 @@ from PyQt5.QtMultimedia import QSound
 from PyQt5.QtCore import QRunnable, QThreadPool, QObject, pyqtSlot, pyqtSignal, \
     Qt, QRectF, QTimer
 
-from PyQt5.QtWidgets import QApplication, QMainWindow, QGraphicsItem, QGraphicsScene, \
-    QGraphicsPixmapItem, QWidget, QSizePolicy, QMessageBox, QVBoxLayout, QCheckBox
+from PyQt5.QtWidgets import (
+    QApplication,
+    QMainWindow,
+    QGraphicsItem,
+    QGraphicsScene,
+    QGraphicsPixmapItem,
+    QWidget,
+    QSizePolicy,
+    QMessageBox,
+    QVBoxLayout,
+    QGridLayout,
+    QCheckBox,
+    QDialog,
+    QDialogButtonBox,
+    QPushButton,
+    QLabel,
+)
 
-from logging.handlers import TimedRotatingFileHandler
+from logging.handlers import RotatingFileHandler
 
 from astropy.io import fits
 
@@ -155,11 +170,14 @@ def init_logger(logger, filename):
     #    ("%(asctime)s - %(name)s[%(process)d] - %(levelname)s - "
     #     "%(filename)s:%(lineno)s - %(funcName)s() - %(message)s - "))
 
-    fh = TimedRotatingFileHandler(filename, when='D', interval=1, backupCount=365)
-    fh.setLevel(logging.DEBUG)
+    #fh = TimedRotatingFileHandler(filename, when='D', interval=1, backupCount=365)
+    fh = RotatingFileHandler(filename, maxBytes=100*1024**2, backupCount=10)
+    #fh.setLevel(logging.DEBUG)
+    fh.setLevel(logging.INFO)
     fh.setFormatter(formatter)
 
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
+    #logger.setLevel(logging.DEBUG)
     logger.addHandler(fh)
 
 class ClientStatus(Enum):
@@ -253,7 +271,7 @@ class TelescopeClient():
             raise Exception("Telescope timeout: %s %s" % (key, value))
 
     def set_guider_absolute_offsets(self, ra, dec):
-        self.run_ascol('TSGA %.2f %.2f' % (ra, dec), 'Set guider absolute offsets')
+        self.run_ascol('TSGA %.1f %.1f' % (ra, dec), 'Set guider absolute offsets')
 
     def set_guider_relative_offsets(self, ra, dec):
         self.run_ascol('TSGR %.2f %.2f' % (ra, dec), 'Set guider relative offsets')
@@ -681,8 +699,7 @@ class TelescopeThread:
         self.progress_callback = progress_callback
         self.name = name
 
-        self.logger = logging.getLogger(name)
-        init_logger(self.logger, FIBER_POINTING_CLIENT_LOG % name)
+        self.logger = self.gui.thread_logger[name]
         self.logger.info("Starting process '%s'" % name)
 
         if name == "telescope_read":
@@ -700,23 +717,6 @@ class GuiderThread:
         self.gui = gui
         self.cfg = gui.cfg
         self.is_stop = gui.is_stop
-
-        #self.telescope_proxy = xmlrpc.client.ServerProxy("http://%(host)s:%(port)s" % self.cfg["telescope"])
-
-    def ascol_send(self, cmd, frequent=False):
-        if frequent:
-            logger_fce = self.logger.debug
-        else:
-            logger_fce = self.logger.info
-
-        answer = self.telescope_proxy.run_ascol(cmd)
-
-        if answer != "ERR":
-            logger_fce("ASCOL '%s' => '%s'" % (cmd, answer))
-        else:
-            self.logger.error("ASCOL '%s' => '%s'" % (cmd, answer))
-
-        return answer
 
     def run_read(self):
 
@@ -746,6 +746,23 @@ class GuiderThread:
         ccd_exposure = self.device_ccd.getNumber("CCD_EXPOSURE")
 
         for item in command:
+            cmd = item[0]
+            if cmd == "gain":
+                new_value = item[1]
+                gain = self.device_ccd.getNumber("CCD_GAIN")
+                old_value = gain[0].value
+                gain[0].value = new_value
+                self.indiclient.sendNewNumber(gain)
+
+                data = {
+                    "command": "gain",
+                    "old_gain": old_value,
+                    "new_gain": new_value,
+                }
+
+                self.progress_callback.emit(self.name, data)
+                continue
+
             cmd, expose_time, count_repeat, delay_after_exposure = item
             print(item)
 
@@ -778,8 +795,7 @@ class GuiderThread:
         self.progress_callback = progress_callback
         self.name = name
 
-        self.logger = logging.getLogger(name)
-        init_logger(self.logger, FIBER_POINTING_CLIENT_LOG % name)
+        self.logger = self.gui.thread_logger[name]
         self.logger.info("Starting process '%s'" % name)
 
         self.blob_event = threading.Event()
@@ -952,6 +968,114 @@ class FiberPointingScene(QGraphicsScene):
 #        print(point.x(), point.y())
 #        super(FiberPointingScene, self).mousePressEvent(event)
 
+class ClickableLabel(QLabel):
+
+    def __init__(self, data, callback_clicked, parent=None):
+        QLabel.__init__(self, parent)
+        self.callback_clicked = callback_clicked
+        self.ra_offset, self.dec_offset = data
+
+    def mouseReleaseEvent(self, event):
+        self.callback_clicked(event, self.ra_offset, self.dec_offset)
+
+    def load_image(self, image_orig):
+        height, width = image_orig.shape
+        bytes_per_line = width
+
+        #scale_interval = MinMaxInterval()
+        scale_interval = ZScaleInterval()
+
+        scale_stretch = LinearStretch()
+
+        image_normalize = ImageNormalize(image_orig, interval=scale_interval, stretch=scale_stretch, clip=True)
+        image = img_as_ubyte(image_normalize(image_orig))
+
+        qimage = QImage(image, width, height, bytes_per_line, QImage.Format_Grayscale8)
+        qimage = qimage.scaled(320, 240, aspectRatioMode=Qt.KeepAspectRatio, transformMode=Qt.SmoothTransformation)
+
+        self.setPixmap(QPixmap.fromImage(qimage))
+
+    def get_offsets(self):
+        return [self.ra_offset, self.dec_offset]
+
+class ScanDialog(QDialog):
+
+    def __init__(self, positions, expose_time, expose_delay_after_exposure, parent=None):
+        super().__init__(parent=parent)
+
+        self.expose_time = expose_time
+        self.expose_delay_after_exposure = expose_delay_after_exposure
+        self.gui = parent
+
+        self.setWindowTitle("Autoguider Scan")
+
+        buttons = QDialogButtonBox.Ok | QDialogButtonBox.Cancel
+
+        self.button_box = QDialogButtonBox(buttons)
+        self.button_box.accepted.connect(self.accept)
+        self.button_box.rejected.connect(self.reject)
+
+        self.labels = []
+        self.grid_layout = QGridLayout()
+        row = 0
+        idx = 0
+        for items in positions:
+            col = 0
+            for item in items:
+                #button = QPushButton("%s %i %i" % (item, row, col))
+
+                self.labels.append(ClickableLabel(item, self.image_clicked))
+                image = QImage("/opt/indi_autoguider/share/splash_screen.jpg")
+                image = image.scaled(320, 240, aspectRatioMode=Qt.KeepAspectRatio, transformMode=Qt.SmoothTransformation)
+                self.labels[idx].setPixmap(QPixmap.fromImage(image))
+                self.labels[idx].setToolTip("offsets = %s" % (item))
+
+                self.grid_layout.addWidget(self.labels[idx], row, col)
+                col += 1
+                idx += 1
+            row += 1
+
+        self.actual_label_idx = 0
+        self.max_label_idx = idx - 1
+
+        self.layout = QVBoxLayout()
+        self.layout.addLayout(self.grid_layout)
+        self.layout.addWidget(self.button_box)
+        self.setLayout(self.layout)
+
+        self.resize(640, 480)
+
+        self.next_position()
+
+    def next_position(self):
+        ra_offset, dec_offset = self.labels[self.actual_label_idx].get_offsets()
+
+        self.gui.log("set guider absolute ra_offset = %.2f, dec_offset = %.2f" % (ra_offset, dec_offset))
+        self.gui.run_set_guider_absolute_offsets(ra_offset, dec_offset)
+
+        QTimer.singleShot(self.expose_delay_after_exposure * 1000, self.next_exposure)
+
+    def next_exposure(self):
+        self.gui.log("start expose %f" % self.expose_time)
+        self.gui.create_guider_command_thread([["start", self.expose_time, 1, 0]])
+
+    def image_clicked(self, event, ra_offset, dec_offset):
+        button = event.button()
+        modifiers = event.modifiers()
+
+        if modifiers == Qt.NoModifier and button == Qt.LeftButton:
+            self.gui.run_set_guider_absolute_offsets(ra_offset, dec_offset)
+
+    def load_image(self, image):
+        self.labels[self.actual_label_idx].load_image(image)
+        self.actual_label_idx += 1
+
+        if self.actual_label_idx > self.max_label_idx:
+            self.actual_label_idx = 0
+            return
+
+        self.next_position()
+
 class FiberPointingUI(QMainWindow):
 
     COLORS = {
@@ -994,6 +1118,8 @@ class FiberPointingUI(QMainWindow):
         self.sounds_enabled["set"] = True
         self.sounds_enabled["new_image"] = True
 
+        self.scan_dialog = None
+
         uic.loadUi(FIBER_POINTING_CLIENT_UI, self)
 
         self.logger = logging.getLogger("fiber_pointing_client")
@@ -1003,10 +1129,14 @@ class FiberPointingUI(QMainWindow):
         self.exit = threading.Event()
         self.stop_event = threading.Event()
 
+        self.thread_logger = {}
         self.thread_exit = {}
         for key in ["telescope_read", "telescope_command", "guider_read", "guider_command"]:
             self.thread_exit[key] = threading.Event()
             self.thread_exit[key].set()
+
+            self.thread_logger[key] = logging.getLogger(key)
+            init_logger(self.thread_logger[key], FIBER_POINTING_CLIENT_LOG % key)
 
         self.expose_filter_layout = QVBoxLayout()
         self.expose_filter_GB.setLayout(self.expose_filter_layout)
@@ -1063,6 +1193,8 @@ class FiberPointingUI(QMainWindow):
         self.action_sounds_new_image.triggered.connect(lambda: self.set_sounds(self.action_sounds_new_image, "new_image"))
         self.action_sounds_error.triggered.connect(lambda: self.set_sounds(self.action_sounds_error, "error"))
 
+        self.scan_start_BT.clicked.connect(self.scan_start_clicked)
+
         self.telescope_up_BT.clicked.connect(lambda: self.telescope_move("up"))
         self.telescope_down_BT.clicked.connect(lambda: self.telescope_move("down"))
         self.telescope_right_BT.clicked.connect(lambda: self.telescope_move("right"))
@@ -1078,6 +1210,7 @@ class FiberPointingUI(QMainWindow):
         self.expose_ccd_temp_SB.valueChanged.connect(self.expose_ccd_temp_changed)
         self.expose_preflash_DSB.valueChanged.connect(self.expose_preflash_changed)
         self.expose_preflash_num_clear_SB.valueChanged.connect(self.expose_preflash_changed)
+        self.gain_SB.valueChanged.connect(self.gain_changed)
 
         self.autodetect_GI = SightGraphicsItem(100, 100, Qt.blue, rectangle=False)
 
@@ -1593,6 +1726,9 @@ class FiberPointingUI(QMainWindow):
             self.camera_name = "photometric"
             self.set_expose_camera_photometry()
 
+    def gain_changed(self):
+        self.create_guider_command_thread([["gain", self.gain_SB.value()]])
+
     def expose_ccd_temp_changed(self):
         result = self.proxy["%s_camera" % self.camera_name].set_temperature(self.expose_ccd_temp_SB.value())
 
@@ -1729,6 +1865,28 @@ class FiberPointingUI(QMainWindow):
             self.source_x_SB.setEnabled(True)
             self.source_y_SB.setEnabled(True)
 
+    def scan_start_clicked(self):
+        max_offset = self.scan_max_offset_DSB.value()
+        count_repeat = self.scan_count_repeat_SB.value()
+        step = (max_offset * 2.0) / (count_repeat - 1)
+
+        positions = [[]]
+        row = 0
+        for ra in np.arange(-max_offset, max_offset+0.01, step):
+            col = 0
+            for dec in np.arange(-max_offset, max_offset+0.01, step):
+                positions[row].append([ra, dec])
+                col += 1
+            positions.append([])
+            row += 1
+
+        expose_time = self.expose_exptime_pointing_DSB.value()
+        expose_delay_after_exposure = self.expose_delay_after_exposure_SB.value()
+
+        self.scan_dialog = ScanDialog(positions, expose_time, expose_delay_after_exposure, parent=self)
+        self.scan_dialog.exec_()
+        self.scan_dialog = None
+
     def expose_start_clicked(self):
         print("expose_start_clicked")
 
@@ -1824,6 +1982,19 @@ class FiberPointingUI(QMainWindow):
             "name": "telescope_command",
             "gui": self,
             "command": [["set_guider_relative_offsets", x, y]],
+            "thread_exit": self.thread_exit["telescope_command"],
+        }
+
+        self.telescope_command_thread = TelescopeThread(self)
+        telescope_worker = Worker(self.telescope_command_thread.run, **kwargs)
+
+        self.threadpool.start(telescope_worker)
+
+    def run_set_guider_absolute_offsets(self, x, y):
+        kwargs = {
+            "name": "telescope_command",
+            "gui": self,
+            "command": [["set_guider_absolute_offsets", x, y]],
             "thread_exit": self.thread_exit["telescope_command"],
         }
 
@@ -2128,6 +2299,9 @@ class FiberPointingUI(QMainWindow):
             self.graphics_item_set(self.target_GI)
             self.play("new_image")
 
+            if self.scan_dialog is not None:
+                self.scan_dialog.load_image(self.image_orig)
+
             if storage_cfg["save"]:
                 print(filename)
                 fo = open(filename, "wb")
@@ -2140,7 +2314,9 @@ class FiberPointingUI(QMainWindow):
             self.image_size_LB.setText("")
 
     def progress_guider_command_fn(self, data):
-        print(data)
+        if data["command"] == "gain":
+            msg = "Set gain from %(old_gain)i to %(new_gain)i" % data
+            self.log(msg)
 
     def thread_progress(self, category, data):
         if self.exit.is_set():
@@ -2215,6 +2391,10 @@ class FiberPointingUI(QMainWindow):
         self.logger.info("GUI exiting...")
 
     def create_guider_command_thread(self, command):
+        if not self.thread_exit["guider_command"].is_set():
+            self.log("Action already run", level="warning")
+            return
+
         self.refresh_statusbar(ClientStatus.RUNNING)
 
         self.exit.clear()
@@ -2228,9 +2408,7 @@ class FiberPointingUI(QMainWindow):
             "thread_exit": self.thread_exit["guider_command"],
         }
 
-        dt_str = datetime.now().strftime("%H:%M:%S")
-        self.log_PTE.textCursor().insertHtml("<b>%s: </b>" % dt_str)
-        self.log_PTE.textCursor().insertHtml('<font color="#000000">%s</font><br>' % command)
+        self.log("guider_command = %s" % command)
         self.logger.info("create_ccd_command_thread(%s)" % command)
 
         self.guider_command_thread = GuiderThread(self)
