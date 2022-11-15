@@ -45,7 +45,7 @@ xpa-tools
 ### Run
 
 ```
-workstation$ ./platospec/indi_autoguider/bin/indi_autoguider.py
+workstation$ /opt/indi_autoguider/bin/indi_autoguider.py
 ```
 
 ![Pucheros Autoguider GUI](doc/screenshot/pucheros_autoguider_gui.png)
@@ -56,7 +56,7 @@ workstation$ ./platospec/indi_autoguider/bin/indi_autoguider.py
 ### Run
 
 ```
-workstation$ ./platospec/pucheros_expose_gui/bin/pucheros_expose.py
+workstation$ /opt/pucheros_expose_gui/bin/pucheros_expose.py
 ```
 
 ![Pucheros Expose GUI](doc/screenshot/pucheros_expose_gui.png)
@@ -70,9 +70,9 @@ Create wrapper **telescope_control_gui**:
 ```
 #!/bin/bash
 
-export ICE_CONFIG=/home/user/platospec/telescope_control_gui/etc/ice_client.cfg
+export ICE_CONFIG=/opt/telescope_control_gui/etc/ice_client.cfg
 
-/home/user/platospec/telescope_control_gui/bin/ascol_client.py
+/opt/telescope_control_gui/bin/ascol_client.py
 
 ```
 
@@ -90,7 +90,7 @@ workstation$ ./telescope_control_gui
 ### Run
 
 ```
-workstation$ ./platospec/e152_watchdog/bin/e152_watchdog.py
+workstation$ /opt/e152_watchdog/bin/e152_watchdog.py
 ```
 
 ![E152 Watchdog GUI](doc/screenshot/e152_watchdog_gui.png)
