@@ -9,6 +9,14 @@ All programs directory must be copy to /opt.
 
 All programs log directory must be writable for normal user.
 
+Create following directories and this directories must be writable for normal user:
+
+```
+$ mkdir -p /data/pucheros_guiding/
+$ mkdir -p /data/pucheros_guiding/INCOMING/
+$ mkdir -p /data/pucheros_sci/
+```
+
 ## Dependencies
 
 Download INDI Core Library from https://github.com/indilib/indi and install:
