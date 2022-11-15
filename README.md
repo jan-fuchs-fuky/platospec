@@ -7,7 +7,7 @@ workstation$ git clone https://github.com/jan-fuchs-fuky/platospec.git platospec
 
 All programs directory must be copy to /opt.
 
-All programs log directory must be writtable for normal user.
+All programs log directory must be writable for normal user.
 
 ## Dependencies
 
