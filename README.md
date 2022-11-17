@@ -26,7 +26,7 @@ Download INDI Core Library from https://github.com/indilib/indi and install:
 libusb-dev zlib1g-dev libftdi-dev libgsl0-dev libjpeg-dev libkrb5-dev libnova-dev \
 libtiff-dev libfftw3-dev librtlsdr-dev libcfitsio-dev libgphoto2-dev build-essential \
 libusb-1.0-0-dev libdc1394-22-dev libboost-regex-dev libcurl4-gnutls-dev libtheora-dev \
-libnova-dev libfftw3-dev
+libnova-dev libfftw3-dev swig
 
 $ unzip indi-master.zip
 $ mkdir libindi_build
