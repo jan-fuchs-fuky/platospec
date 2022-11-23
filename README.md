@@ -107,6 +107,46 @@ workstation$ /opt/e152_watchdog/bin/e152_watchdog.py
 
 ![E152 Watchdog GUI](doc/screenshot/e152_watchdog_gui.png)
 
+## Install OEM Windows 10 to KVM
+
+Check if OEM license is available for motherboard:
+
+```
+# strings /sys/firmware/acpi/tables/MSDM
+MSDMU
+TDELL  CBX3
+AMI
+ZNIO3-WP4QR-OPK8E-756XR-LMMRT
+```
+
+Create new virtual machine by virt-manager and edit setup:
+
+```
+# cd /usr/share/seabios/
+# cat /sys/firmware/acpi/tables/SLIC > slic.bin
+# cat /sys/firmware/acpi/tables/MSDM > msdm.bin
+# dmidecode -t 0 -u | grep $'^\t\t[^"]' | xargs -n1 | perl -lne 'printf "%c", hex($_)' > smbios_type_0.bin
+# dmidecode -t 1 -u | grep $'^\t\t[^"]' | xargs -n1 | perl -lne 'printf "%c", hex($_)' > smbios_type_1.bin
+
+# virsh edit win10
+<domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
+  <name>win10</name>
+  <uuid>d699ab6d-b195-4899-b953-57d5021686ba</uuid>
+  ...
+  </devices>
+  <qemu:commandline>
+    <qemu:arg value='-acpitable'/>
+    <qemu:arg value='file=/usr/share/seabios/slic.bin'/>
+    <qemu:arg value='-acpitable'/>
+    <qemu:arg value='file=/usr/share/seabios/msdm.bin'/>
+    <qemu:arg value='-smbios'/>
+    <qemu:arg value='file=/usr/share/seabios/smbios_type_0.bin'/>
+    <qemu:arg value='-smbios'/>
+    <qemu:arg value='file=/usr/share/seabios/smbios_type_1.bin'/>
+  </qemu:commandline>
+</domain>
+```
+
 ## Usage ASCOL simulator
 
 Set paths **IceSSL.CAs** and **IceSSL.CertFile** in **etc/ice\_client.cfg** and **etc/ice\_server.cfg**.
