@@ -1,6 +1,23 @@
 # platospec
 Ground-based support for exoplanetary space missions.
 
+### Table of Contents
+- **[Ubuntu 22.04.1 LTS (jammy)](#ubuntu-22041-lts-jammy)**
+    - **[Download all-in-one package](#download-all-in-one-package)**
+- **[Debian GNU/Linux 11 (bullseye)](#debian-gnulinux-11-bullseye)**
+    - **[Dependencies](#dependencies)**
+    - **[Pucheros Autoguider GUI](#pucheros-autoguider-gui)**
+    - **[Pucheros Expose GUI](#pucheros-expose-gui)**
+    - **[Telescope Control GUI](#telescope-control-gui)**
+    - **[E152 Watchdog GUI](#e152-watchdog-gui)**
+- **[Install OEM Windows 10 to KVM](#install-oem-windows-10-to-kvm)**
+- **[Usage ASCOL simulator](#usage-ascol-simulator)**
+- **[Set MTU on network interface cards La Silla computers](#set-mtu-on-network-interface-cards-la-silla-computers)**
+    - **[Temporary setup](#temporary-setup)**
+    - **[RaspberryPi /etc/dhcpcd.conf](#raspberrypi-etcdhcpcdconf)**
+    - **[Ubuntu /etc/netplan/01-network-manager-all.yaml](#ubuntu-etcnetplan01-network-manager-allyaml)**
+    - **[Debian /etc/network/interfaces](#debian-etcnetworkinterfaces)**
+
 ```
 workstation$ git clone https://github.com/jan-fuchs-fuky/platospec.git platospec
 ```
@@ -17,7 +34,15 @@ $ mkdir -p /data/pucheros_guiding/INCOMING/
 $ mkdir -p /data/pucheros_sci/
 ```
 
-## Dependencies
+## Ubuntu 22.04.1 LTS (jammy)
+
+### Download all-in-one package
+
+The easiest way to run all programs without installing anything.
+
+## Debian GNU/Linux 11 (bullseye)
+
+### Dependencies
 
 Download INDI Core Library from https://github.com/indilib/indi and install:
 
@@ -52,9 +77,9 @@ python3-requests python3-sdnotify python3-skimage python3-socketio rsync saods9 
 xpa-tools
 ```
 
-## Pucheros Autoguider GUI
+### Pucheros Autoguider GUI
 
-### Run
+#### Run
 
 ```
 workstation$ /opt/indi_autoguider/bin/indi_autoguider.py
@@ -63,9 +88,9 @@ workstation$ /opt/indi_autoguider/bin/indi_autoguider.py
 ![Pucheros Autoguider GUI](doc/screenshot/pucheros_autoguider_gui.png)
 ![Pucheros Autoguider GUI Scan](doc/screenshot/pucheros_autoguider_gui_scan.png)
 
-## Pucheros Expose GUI
+### Pucheros Expose GUI
 
-### Run
+#### Run
 
 ```
 workstation$ /opt/pucheros_expose_gui/bin/pucheros_expose.py
@@ -73,33 +98,20 @@ workstation$ /opt/pucheros_expose_gui/bin/pucheros_expose.py
 
 ![Pucheros Expose GUI](doc/screenshot/pucheros_expose_gui.png)
 
-## Telescope Control GUI
+### Telescope Control GUI
 
-### Run
-
-Create wrapper **telescope_control_gui**:
+#### Run
 
 ```
-#!/bin/bash
+workstation$ /opt/telescope_control_gui/bin/ascol_client.py
 
-export ICE_CONFIG=/opt/telescope_control_gui/etc/ice_client.cfg
-
-/opt/telescope_control_gui/bin/ascol_client.py
-
-```
-
-Add execute permission and run:
-
-```
-workstation$ chmod +x telescope_control_gui
-workstation$ ./telescope_control_gui
 ```
 
 ![Telescope Control GUI](doc/screenshot/telescope_control_gui.png)
 
-## E152 Watchdog GUI
+### E152 Watchdog GUI
 
-### Run
+#### Run
 
 ```
 workstation$ /opt/e152_watchdog/bin/e152_watchdog.py
@@ -157,4 +169,61 @@ $ cd platospec/telescope/
 $ ./test/ascol_simulator.py
 $ ICE_CONFIG=/home/user/git/platospec/telescope/etc/ice_server.cfg ./bin/ascol_server.py
 $ ICE_CONFIG=/home/user/git/platospec/telescope/etc/ice_client.cfg ./bin/ascol_client_cli.py
+```
+
+## Set MTU on network interface cards La Silla computers
+
+### Temporary setup
+
+New solution:
+
+```
+# ip link set dev eno1 mtu 1280
+```
+
+Old solution:
+
+```
+# ifconfig eth0 mtu 1280
+```
+
+### RaspberryPi /etc/dhcpcd.conf
+
+```
+# vim /etc/dhcpcd.exit-hook
+#!/bin/bash
+ifconfig eth0 mtu 1280
+
+# chmod u=rwx,og=rx /etc/dhcpcd.exit-hook
+```
+
+### Ubuntu /etc/netplan/01-network-manager-all.yaml
+
+```
+network:
+    ethernets:
+        eno1:
+            mtu: 1280
+            addresses:
+            - NNN.NNN.NNN.NNN/NN
+            dhcp4: false
+            dhcp6: false
+            gateway4: NNN.NNN.NNN.N
+            nameservers:
+                addresses:
+                - 8.8.8.8
+                - 8.8.4.4
+    version: 2
+```
+
+### Debian /etc/network/interfaces
+
+```
+auto en01
+iface en01 inet static
+    address NNN.NNN.NNN.NNN
+    netmask NNN.NNN.NNN.N
+    network NNN.NNN.NNN.N
+    gateway NNN.NNN.NNN.N
+    mtu 1280
 ```
