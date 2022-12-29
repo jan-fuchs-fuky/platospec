@@ -38,7 +38,11 @@ $ mkdir -p /data/pucheros_sci/
 
 ### Download all-in-one package
 
-The easiest way to run all programs without installing anything.
+The easiest way to run all programs.
+
+```
+# apt install xpa-tools saods9
+```
 
 ## Debian GNU/Linux 11 (bullseye)
 
