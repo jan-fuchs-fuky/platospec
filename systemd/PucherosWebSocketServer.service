@@ -17,6 +17,7 @@ ExecStop=/bin/kill -s TERM $MAINPID
 WorkingDirectory=/home/pucherosmgr/SOURCE/puchero_plus/GUI/backend
 Environment=PYTHONPATH='/opt/PucherosPlus/lib/python3/site-packages'
 Environment=INTROOT='/opt/PucherosPlus'
+Environment=INSROOT='/opt/PucherosPlus-Data'
 
 PrivateTmp=true
 RestartSec=10
