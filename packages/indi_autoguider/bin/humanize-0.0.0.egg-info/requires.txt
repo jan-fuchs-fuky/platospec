@@ -1,0 +1,5 @@
+
+[tests]
+freezegun
+pytest
+pytest-cov

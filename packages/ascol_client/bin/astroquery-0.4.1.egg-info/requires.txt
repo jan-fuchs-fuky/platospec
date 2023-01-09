@@ -1,0 +1,5 @@
+
+[test]
+photutils
+pytest-astropy
+scipy

@@ -1,0 +1,26 @@
+
+[:python_version < "3.8"]
+importlib_metadata>=1
+
+[:sys_platform == "linux"]
+SecretStorage>=3.2
+jeepney>=0.4.2
+
+[:sys_platform == "win32"]
+pywin32-ctypes!=0.1.0,!=0.1.1
+
+[docs]
+jaraco.packaging>=8.2
+rst.linker>=1.9
+sphinx
+
+[testing]
+pytest!=3.7.3,>=3.5
+pytest-checkdocs>=1.2.3
+pytest-cov
+pytest-enabler
+pytest-flake8
+
+[testing:platform_python_implementation != "PyPy"]
+pytest-black>=0.3.7
+pytest-mypy

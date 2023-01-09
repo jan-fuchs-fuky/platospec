@@ -42,6 +42,10 @@ The easiest way to run all programs.
 
 ```
 # apt install xpa-tools saods9
+
+$ /opt/e152_watchdog/bin/e152_watchdog
+$ /opt/indi_autoguider/bin/indi_autoguider
+$ /opt/ascol_client/bin/ascol_client
 ```
 
 ## Debian GNU/Linux 11 (bullseye)
