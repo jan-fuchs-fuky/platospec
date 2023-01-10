@@ -38,7 +38,7 @@ $ mkdir -p /data/pucheros_sci/
 
 ### Download all-in-one packages
 
-The easiest way to run all programs. Copy all from directory packages to /opt.
+The easiest way to run all programs. Copy all from directory [packages](https://github.com/jan-fuchs-fuky/platospec/tree/main/packages) to /opt.
 
 ```
 # apt install xpa-tools saods9
