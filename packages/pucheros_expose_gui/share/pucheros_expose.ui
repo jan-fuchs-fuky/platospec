@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>414</width>
+    <height>726</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Expose</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>10</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>10</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
+    <item row="10" column="0" colspan="4">
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="1">
+        <widget class="QPushButton" name="stop_BT">
+         <property name="text">
+          <string>Stop</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="start_BT">
+         <property name="text">
+          <string>Start</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Target:</string>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Exposure time:</string>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Object:</string>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2" colspan="2">
+     <widget class="QLineEdit" name="target_LE"/>
+    </item>
+    <item row="15" column="0" colspan="4">
+     <widget class="QProgressBar" name="progressBar">
+      <property name="value">
+       <number>24</number>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="1">
+     <widget class="QLabel" name="mirror_LB">
+      <property name="text">
+       <string>unknown</string>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="3">
+     <widget class="QPushButton" name="comp_lamp_off_BT">
+      <property name="text">
+       <string>OFF</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="1">
+     <widget class="QLabel" name="ccd_temperature_LB">
+      <property name="text">
+       <string>unknown</string>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="1">
+     <widget class="QLabel" name="flat_lamp_LB">
+      <property name="text">
+       <string>unknown</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2" colspan="2">
+     <widget class="QSpinBox" name="exposure_time_SB">
+      <property name="maximum">
+       <number>7200</number>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="2">
+     <widget class="QPushButton" name="flat_lamp_on_BT">
+      <property name="text">
+       <string>ON</string>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="2">
+     <widget class="QPushButton" name="comp_lamp_on_BT">
+      <property name="text">
+       <string>ON</string>
+      </property>
+     </widget>
+    </item>
+    <item row="21" column="0" colspan="4">
+     <widget class="QPlainTextEdit" name="log_PTE">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Comp lamp:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="0">
+     <widget class="QLabel" name="label_11">
+      <property name="text">
+       <string>CCD Temperature:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="3">
+     <widget class="QPushButton" name="flat_lamp_off_BT">
+      <property name="text">
+       <string>OFF</string>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="1">
+     <widget class="QLabel" name="comp_lamp_LB">
+      <property name="text">
+       <string>unknown</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2" colspan="2">
+     <widget class="QCheckBox" name="comp_after_every_exposure_CHECKBOX">
+      <property name="text">
+       <string>Comp after every exposure</string>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="2">
+     <widget class="QPushButton" name="mirror_target_BT">
+      <property name="text">
+       <string>Target</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2" colspan="2">
+     <widget class="QComboBox" name="object_CB">
+      <item>
+       <property name="text">
+        <string>target</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>zero</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>flat</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>comp</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="3" column="2" colspan="2">
+     <widget class="QSpinBox" name="count_repeat_SB">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>10000</number>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Mirror:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="3">
+     <widget class="QPushButton" name="mirror_calibration_BT">
+      <property name="text">
+       <string>Calibration</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Count repeat:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Flat lamp:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="20" column="0">
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>Rsync:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="20" column="1" colspan="3">
+     <widget class="QLabel" name="rsync_LB">
+      <property name="text">
+       <string>unknown</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

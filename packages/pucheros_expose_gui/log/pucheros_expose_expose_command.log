@@ -1,0 +1,1044 @@
+2022-12-19 13:07:21,569 - expose_command[250913][140306448119552] - INFO - Starting process 'expose_command'
+2022-12-19 13:07:22,039 - expose_command[250913][140306448119552] - INFO - params = {'state': 'rest'}
+2022-12-19 13:07:22,039 - expose_command[250913][140306448119552] - INFO - action mirror_calibration => 200
+2022-12-19 13:07:22,502 - expose_command[250913][140306448119552] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-19 13:07:22,502 - expose_command[250913][140306448119552] - INFO - action turn => 200
+2022-12-19 13:07:22,966 - expose_command[250913][140306448119552] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-19 13:07:22,966 - expose_command[250913][140306448119552] - INFO - action turn => 200
+2022-12-19 13:07:23,431 - expose_command[250913][140306448119552] - INFO - params = {'observation_type': 'science', 'sufix_name': 'test', 'exposure_time': 600, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-19 13:07:23,431 - expose_command[250913][140306448119552] - INFO - action set_observation => 200
+2022-12-19 13:07:23,933 - expose_command[250913][140306448119552] - INFO - params = {'observation_type': 'science', 'number_exposures': 1}
+2022-12-19 13:07:23,933 - expose_command[250913][140306448119552] - INFO - action start_observation => 500
+2022-12-19 13:07:49,721 - expose_command[250913][140306448119552] - INFO - Starting process 'expose_command'
+2022-12-19 13:07:49,721 - expose_command[250913][140306448119552] - INFO - Starting process 'expose_command'
+2022-12-19 13:07:50,185 - expose_command[250913][140306448119552] - INFO - params = {'state': 'rest'}
+2022-12-19 13:07:50,185 - expose_command[250913][140306448119552] - INFO - params = {'state': 'rest'}
+2022-12-19 13:07:50,185 - expose_command[250913][140306448119552] - INFO - action mirror_calibration => 200
+2022-12-19 13:07:50,185 - expose_command[250913][140306448119552] - INFO - action mirror_calibration => 200
+2022-12-19 13:07:50,649 - expose_command[250913][140306448119552] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-19 13:07:50,649 - expose_command[250913][140306448119552] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-19 13:07:50,649 - expose_command[250913][140306448119552] - INFO - action turn => 200
+2022-12-19 13:07:50,649 - expose_command[250913][140306448119552] - INFO - action turn => 200
+2022-12-19 13:07:51,110 - expose_command[250913][140306448119552] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-19 13:07:51,110 - expose_command[250913][140306448119552] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-19 13:07:51,111 - expose_command[250913][140306448119552] - INFO - action turn => 200
+2022-12-19 13:07:51,111 - expose_command[250913][140306448119552] - INFO - action turn => 200
+2022-12-19 13:07:51,577 - expose_command[250913][140306448119552] - INFO - params = {'observation_type': 'science', 'sufix_name': 'test', 'exposure_time': 5, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-19 13:07:51,577 - expose_command[250913][140306448119552] - INFO - params = {'observation_type': 'science', 'sufix_name': 'test', 'exposure_time': 5, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-19 13:07:51,577 - expose_command[250913][140306448119552] - INFO - action set_observation => 200
+2022-12-19 13:07:51,577 - expose_command[250913][140306448119552] - INFO - action set_observation => 200
+2022-12-19 13:07:52,040 - expose_command[250913][140306448119552] - INFO - params = {'observation_type': 'science', 'number_exposures': 1}
+2022-12-19 13:07:52,040 - expose_command[250913][140306448119552] - INFO - params = {'observation_type': 'science', 'number_exposures': 1}
+2022-12-19 13:07:52,040 - expose_command[250913][140306448119552] - INFO - action start_observation => 500
+2022-12-19 13:07:52,040 - expose_command[250913][140306448119552] - INFO - action start_observation => 500
+2022-12-19 13:08:27,825 - expose_command[250913][140306448119552] - INFO - Starting process 'expose_command'
+2022-12-19 13:08:27,825 - expose_command[250913][140306448119552] - INFO - Starting process 'expose_command'
+2022-12-19 13:08:27,825 - expose_command[250913][140306448119552] - INFO - Starting process 'expose_command'
+2022-12-19 13:08:28,289 - expose_command[250913][140306448119552] - INFO - params = {'state': 'rest'}
+2022-12-19 13:08:28,289 - expose_command[250913][140306448119552] - INFO - params = {'state': 'rest'}
+2022-12-19 13:08:28,289 - expose_command[250913][140306448119552] - INFO - params = {'state': 'rest'}
+2022-12-19 13:08:28,290 - expose_command[250913][140306448119552] - INFO - action mirror_calibration => 200
+2022-12-19 13:08:28,290 - expose_command[250913][140306448119552] - INFO - action mirror_calibration => 200
+2022-12-19 13:08:28,290 - expose_command[250913][140306448119552] - INFO - action mirror_calibration => 200
+2022-12-19 13:08:28,751 - expose_command[250913][140306448119552] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-19 13:08:28,751 - expose_command[250913][140306448119552] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-19 13:08:28,751 - expose_command[250913][140306448119552] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-19 13:08:28,751 - expose_command[250913][140306448119552] - INFO - action turn => 200
+2022-12-19 13:08:28,751 - expose_command[250913][140306448119552] - INFO - action turn => 200
+2022-12-19 13:08:28,751 - expose_command[250913][140306448119552] - INFO - action turn => 200
+2022-12-19 13:08:29,215 - expose_command[250913][140306448119552] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-19 13:08:29,215 - expose_command[250913][140306448119552] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-19 13:08:29,215 - expose_command[250913][140306448119552] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-19 13:08:29,215 - expose_command[250913][140306448119552] - INFO - action turn => 200
+2022-12-19 13:08:29,215 - expose_command[250913][140306448119552] - INFO - action turn => 200
+2022-12-19 13:08:29,215 - expose_command[250913][140306448119552] - INFO - action turn => 200
+2022-12-19 13:08:29,684 - expose_command[250913][140306448119552] - INFO - params = {'observation_type': 'science', 'sufix_name': 'test', 'exposure_time': 5, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-19 13:08:29,684 - expose_command[250913][140306448119552] - INFO - params = {'observation_type': 'science', 'sufix_name': 'test', 'exposure_time': 5, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-19 13:08:29,684 - expose_command[250913][140306448119552] - INFO - params = {'observation_type': 'science', 'sufix_name': 'test', 'exposure_time': 5, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-19 13:08:29,684 - expose_command[250913][140306448119552] - INFO - action set_observation => 200
+2022-12-19 13:08:29,684 - expose_command[250913][140306448119552] - INFO - action set_observation => 200
+2022-12-19 13:08:29,684 - expose_command[250913][140306448119552] - INFO - action set_observation => 200
+2022-12-19 13:08:30,145 - expose_command[250913][140306448119552] - INFO - params = {'observation_type': 'science', 'number_exposures': 1}
+2022-12-19 13:08:30,145 - expose_command[250913][140306448119552] - INFO - params = {'observation_type': 'science', 'number_exposures': 1}
+2022-12-19 13:08:30,145 - expose_command[250913][140306448119552] - INFO - params = {'observation_type': 'science', 'number_exposures': 1}
+2022-12-19 13:08:30,146 - expose_command[250913][140306448119552] - INFO - action start_observation => 500
+2022-12-19 13:08:30,146 - expose_command[250913][140306448119552] - INFO - action start_observation => 500
+2022-12-19 13:08:30,146 - expose_command[250913][140306448119552] - INFO - action start_observation => 500
+2022-12-20 10:31:27,252 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:31:27,729 - expose_command[256752][139732449220352] - INFO - params = {'state': 'rest'}
+2022-12-20 10:31:27,729 - expose_command[256752][139732449220352] - INFO - action mirror_calibration => 200
+2022-12-20 10:31:33,171 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:31:33,171 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:31:38,729 - expose_command[256752][139732449220352] - INFO - params = {'state': 'calibration'}
+2022-12-20 10:31:38,729 - expose_command[256752][139732449220352] - INFO - params = {'state': 'calibration'}
+2022-12-20 10:31:38,729 - expose_command[256752][139732449220352] - INFO - action mirror_calibration => 200
+2022-12-20 10:31:38,729 - expose_command[256752][139732449220352] - INFO - action mirror_calibration => 200
+2022-12-20 10:31:42,624 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:31:42,624 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:31:42,624 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:31:48,195 - expose_command[256752][139732449220352] - INFO - params = {'state': 'rest'}
+2022-12-20 10:31:48,195 - expose_command[256752][139732449220352] - INFO - params = {'state': 'rest'}
+2022-12-20 10:31:48,195 - expose_command[256752][139732449220352] - INFO - params = {'state': 'rest'}
+2022-12-20 10:31:48,195 - expose_command[256752][139732449220352] - INFO - action mirror_calibration => 200
+2022-12-20 10:31:48,195 - expose_command[256752][139732449220352] - INFO - action mirror_calibration => 200
+2022-12-20 10:31:48,195 - expose_command[256752][139732449220352] - INFO - action mirror_calibration => 200
+2022-12-20 10:31:54,497 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:31:54,497 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:31:54,497 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:31:54,497 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:31:54,966 - expose_command[256752][139732449220352] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-20 10:31:54,966 - expose_command[256752][139732449220352] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-20 10:31:54,966 - expose_command[256752][139732449220352] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-20 10:31:54,966 - expose_command[256752][139732449220352] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-20 10:31:54,966 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:31:54,966 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:31:54,966 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:31:54,966 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:31:57,955 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:31:57,955 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:31:57,955 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:31:57,955 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:31:57,955 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:31:58,424 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:31:58,424 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:31:58,424 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:31:58,424 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:31:58,424 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:31:58,424 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:31:58,424 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:31:58,424 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:31:58,424 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:31:58,424 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:00,934 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:00,934 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:00,934 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:00,934 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:00,934 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:00,934 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:01,414 - expose_command[256752][139732449220352] - INFO - params = {'turn': True, 'lamp': 'Led'}
+2022-12-20 10:32:01,414 - expose_command[256752][139732449220352] - INFO - params = {'turn': True, 'lamp': 'Led'}
+2022-12-20 10:32:01,414 - expose_command[256752][139732449220352] - INFO - params = {'turn': True, 'lamp': 'Led'}
+2022-12-20 10:32:01,414 - expose_command[256752][139732449220352] - INFO - params = {'turn': True, 'lamp': 'Led'}
+2022-12-20 10:32:01,414 - expose_command[256752][139732449220352] - INFO - params = {'turn': True, 'lamp': 'Led'}
+2022-12-20 10:32:01,414 - expose_command[256752][139732449220352] - INFO - params = {'turn': True, 'lamp': 'Led'}
+2022-12-20 10:32:01,414 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:01,414 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:01,414 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:01,414 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:01,414 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:01,414 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:03,856 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:03,856 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:03,856 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:03,856 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:03,856 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:03,856 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:03,856 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:04,325 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:04,325 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:04,325 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:04,325 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:04,325 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:04,325 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:04,325 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:04,325 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:04,325 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:04,325 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:04,325 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:04,325 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:04,325 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:04,325 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:09,974 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:09,974 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:09,974 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:09,974 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:09,974 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:09,974 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:09,974 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:09,974 - expose_command[256752][139732449220352] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:10,452 - expose_command[256752][139732449220352] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:10,919 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:11,387 - expose_command[256752][139732449220352] - INFO - action turn => 200
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'sufix_name': 'test', 'exposure_time': 10, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'sufix_name': 'test', 'exposure_time': 10, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'sufix_name': 'test', 'exposure_time': 10, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'sufix_name': 'test', 'exposure_time': 10, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'sufix_name': 'test', 'exposure_time': 10, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'sufix_name': 'test', 'exposure_time': 10, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'sufix_name': 'test', 'exposure_time': 10, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'sufix_name': 'test', 'exposure_time': 10, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - action set_observation => 200
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - action set_observation => 200
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - action set_observation => 200
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - action set_observation => 200
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - action set_observation => 200
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - action set_observation => 200
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - action set_observation => 200
+2022-12-20 10:32:11,861 - expose_command[256752][139732449220352] - INFO - action set_observation => 200
+2022-12-20 10:32:12,327 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'number_exposures': 1}
+2022-12-20 10:32:12,327 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'number_exposures': 1}
+2022-12-20 10:32:12,327 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'number_exposures': 1}
+2022-12-20 10:32:12,327 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'number_exposures': 1}
+2022-12-20 10:32:12,327 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'number_exposures': 1}
+2022-12-20 10:32:12,327 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'number_exposures': 1}
+2022-12-20 10:32:12,327 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'number_exposures': 1}
+2022-12-20 10:32:12,327 - expose_command[256752][139732449220352] - INFO - params = {'observation_type': 'science', 'number_exposures': 1}
+2022-12-20 10:32:12,328 - expose_command[256752][139732449220352] - INFO - action start_observation => 500
+2022-12-20 10:32:12,328 - expose_command[256752][139732449220352] - INFO - action start_observation => 500
+2022-12-20 10:32:12,328 - expose_command[256752][139732449220352] - INFO - action start_observation => 500
+2022-12-20 10:32:12,328 - expose_command[256752][139732449220352] - INFO - action start_observation => 500
+2022-12-20 10:32:12,328 - expose_command[256752][139732449220352] - INFO - action start_observation => 500
+2022-12-20 10:32:12,328 - expose_command[256752][139732449220352] - INFO - action start_observation => 500
+2022-12-20 10:32:12,328 - expose_command[256752][139732449220352] - INFO - action start_observation => 500
+2022-12-20 10:32:12,328 - expose_command[256752][139732449220352] - INFO - action start_observation => 500
+2022-12-20 10:32:47,896 - expose_command[256752][139732432434944] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:47,896 - expose_command[256752][139732432434944] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:47,896 - expose_command[256752][139732432434944] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:47,896 - expose_command[256752][139732432434944] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:47,896 - expose_command[256752][139732432434944] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:47,896 - expose_command[256752][139732432434944] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:47,896 - expose_command[256752][139732432434944] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:47,896 - expose_command[256752][139732432434944] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:47,896 - expose_command[256752][139732432434944] - INFO - Starting process 'expose_command'
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - params = {'state': 'rest'}
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:48,364 - expose_command[256752][139732432434944] - INFO - action mirror_calibration => 200
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:48,832 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:49,300 - expose_command[256752][139732432434944] - INFO - action turn => 200
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - action set_observation => 200
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - action set_observation => 200
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - action set_observation => 200
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - action set_observation => 200
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - action set_observation => 200
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - action set_observation => 200
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - action set_observation => 200
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - action set_observation => 200
+2022-12-20 10:32:51,476 - expose_command[256752][139732432434944] - INFO - action set_observation => 200
+2022-12-20 10:32:51,942 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1}
+2022-12-20 10:32:51,942 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1}
+2022-12-20 10:32:51,942 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1}
+2022-12-20 10:32:51,942 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1}
+2022-12-20 10:32:51,942 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1}
+2022-12-20 10:32:51,942 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1}
+2022-12-20 10:32:51,942 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1}
+2022-12-20 10:32:51,942 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1}
+2022-12-20 10:32:51,942 - expose_command[256752][139732432434944] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1}
+2022-12-20 10:32:51,943 - expose_command[256752][139732432434944] - INFO - action start_observation => 500
+2022-12-20 10:32:51,943 - expose_command[256752][139732432434944] - INFO - action start_observation => 500
+2022-12-20 10:32:51,943 - expose_command[256752][139732432434944] - INFO - action start_observation => 500
+2022-12-20 10:32:51,943 - expose_command[256752][139732432434944] - INFO - action start_observation => 500
+2022-12-20 10:32:51,943 - expose_command[256752][139732432434944] - INFO - action start_observation => 500
+2022-12-20 10:32:51,943 - expose_command[256752][139732432434944] - INFO - action start_observation => 500
+2022-12-20 10:32:51,943 - expose_command[256752][139732432434944] - INFO - action start_observation => 500
+2022-12-20 10:32:51,943 - expose_command[256752][139732432434944] - INFO - action start_observation => 500
+2022-12-20 10:32:51,943 - expose_command[256752][139732432434944] - INFO - action start_observation => 500
+2022-12-29 19:23:37,562 - expose_command[179614][139792578762304] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:35,854 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:41,506 - expose_command[183305][139901393540672] - INFO - params = {'state': 'calibration'}
+2022-12-29 19:36:41,507 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:36:43,011 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:43,011 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:43,503 - expose_command[183305][139901393540672] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-29 19:36:43,503 - expose_command[183305][139901393540672] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-29 19:36:43,504 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:36:43,504 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:36:45,508 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:45,508 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:45,508 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:45,999 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:36:45,999 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:36:45,999 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:36:46,000 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:36:46,000 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:36:46,000 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:36:47,403 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:47,403 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:47,403 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:47,403 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:47,892 - expose_command[183305][139901393540672] - INFO - params = {'state': 'calibration'}
+2022-12-29 19:36:47,892 - expose_command[183305][139901393540672] - INFO - params = {'state': 'calibration'}
+2022-12-29 19:36:47,892 - expose_command[183305][139901393540672] - INFO - params = {'state': 'calibration'}
+2022-12-29 19:36:47,892 - expose_command[183305][139901393540672] - INFO - params = {'state': 'calibration'}
+2022-12-29 19:36:47,893 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:36:47,893 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:36:47,893 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:36:47,893 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:36:54,244 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:54,244 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:54,244 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:54,244 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:54,244 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:36:59,861 - expose_command[183305][139901393540672] - INFO - params = {'state': 'rest'}
+2022-12-29 19:36:59,861 - expose_command[183305][139901393540672] - INFO - params = {'state': 'rest'}
+2022-12-29 19:36:59,861 - expose_command[183305][139901393540672] - INFO - params = {'state': 'rest'}
+2022-12-29 19:36:59,861 - expose_command[183305][139901393540672] - INFO - params = {'state': 'rest'}
+2022-12-29 19:36:59,861 - expose_command[183305][139901393540672] - INFO - params = {'state': 'rest'}
+2022-12-29 19:36:59,869 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:36:59,869 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:36:59,869 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:36:59,869 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:36:59,869 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:37:03,228 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:37:03,228 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:37:03,228 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:37:03,228 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:37:03,228 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:37:03,228 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:37:03,720 - expose_command[183305][139901393540672] - INFO - params = {'state': 'rest'}
+2022-12-29 19:37:03,720 - expose_command[183305][139901393540672] - INFO - params = {'state': 'rest'}
+2022-12-29 19:37:03,720 - expose_command[183305][139901393540672] - INFO - params = {'state': 'rest'}
+2022-12-29 19:37:03,720 - expose_command[183305][139901393540672] - INFO - params = {'state': 'rest'}
+2022-12-29 19:37:03,720 - expose_command[183305][139901393540672] - INFO - params = {'state': 'rest'}
+2022-12-29 19:37:03,720 - expose_command[183305][139901393540672] - INFO - params = {'state': 'rest'}
+2022-12-29 19:37:03,722 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:37:03,722 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:37:03,722 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:37:03,722 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:37:03,722 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:37:03,722 - expose_command[183305][139901393540672] - INFO - action mirror_calibration => 200
+2022-12-29 19:37:04,207 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 19:37:04,207 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 19:37:04,207 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 19:37:04,207 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 19:37:04,207 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 19:37:04,207 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 19:37:04,208 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:04,208 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:04,208 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:04,208 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:04,208 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:04,208 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:04,696 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:37:04,696 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:37:04,696 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:37:04,696 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:37:04,696 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:37:04,696 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:37:04,697 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:04,697 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:04,697 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:04,697 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:04,697 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:04,697 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:06,188 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 19:37:06,188 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 19:37:06,188 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 19:37:06,188 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 19:37:06,188 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 19:37:06,188 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 19:37:06,189 - expose_command[183305][139901393540672] - INFO - action set_observation => 200
+2022-12-29 19:37:06,189 - expose_command[183305][139901393540672] - INFO - action set_observation => 200
+2022-12-29 19:37:06,189 - expose_command[183305][139901393540672] - INFO - action set_observation => 200
+2022-12-29 19:37:06,189 - expose_command[183305][139901393540672] - INFO - action set_observation => 200
+2022-12-29 19:37:06,189 - expose_command[183305][139901393540672] - INFO - action set_observation => 200
+2022-12-29 19:37:06,189 - expose_command[183305][139901393540672] - INFO - action set_observation => 200
+2022-12-29 19:37:10,118 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1, 'delay': 0}
+2022-12-29 19:37:10,118 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1, 'delay': 0}
+2022-12-29 19:37:10,118 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1, 'delay': 0}
+2022-12-29 19:37:10,118 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1, 'delay': 0}
+2022-12-29 19:37:10,118 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1, 'delay': 0}
+2022-12-29 19:37:10,118 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1, 'delay': 0}
+2022-12-29 19:37:10,119 - expose_command[183305][139901393540672] - INFO - action start_observation => 200
+2022-12-29 19:37:10,119 - expose_command[183305][139901393540672] - INFO - action start_observation => 200
+2022-12-29 19:37:10,119 - expose_command[183305][139901393540672] - INFO - action start_observation => 200
+2022-12-29 19:37:10,119 - expose_command[183305][139901393540672] - INFO - action start_observation => 200
+2022-12-29 19:37:10,119 - expose_command[183305][139901393540672] - INFO - action start_observation => 200
+2022-12-29 19:37:10,119 - expose_command[183305][139901393540672] - INFO - action start_observation => 200
+2022-12-29 19:37:20,340 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:37:20,340 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:37:20,340 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:37:20,340 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:37:20,340 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:37:20,340 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:37:20,340 - expose_command[183305][139901393540672] - INFO - Starting process 'expose_command'
+2022-12-29 19:37:20,844 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 19:37:20,844 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 19:37:20,844 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 19:37:20,844 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 19:37:20,844 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 19:37:20,844 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 19:37:20,844 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 19:37:20,845 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:20,845 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:20,845 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:20,845 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:20,845 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:20,845 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:20,845 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:27,466 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 19:37:27,466 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 19:37:27,466 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 19:37:27,466 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 19:37:27,466 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 19:37:27,466 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 19:37:27,466 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 19:37:27,467 - expose_command[183305][139901393540672] - INFO - action set_observation => 200
+2022-12-29 19:37:27,467 - expose_command[183305][139901393540672] - INFO - action set_observation => 200
+2022-12-29 19:37:27,467 - expose_command[183305][139901393540672] - INFO - action set_observation => 200
+2022-12-29 19:37:27,467 - expose_command[183305][139901393540672] - INFO - action set_observation => 200
+2022-12-29 19:37:27,467 - expose_command[183305][139901393540672] - INFO - action set_observation => 200
+2022-12-29 19:37:27,467 - expose_command[183305][139901393540672] - INFO - action set_observation => 200
+2022-12-29 19:37:27,467 - expose_command[183305][139901393540672] - INFO - action set_observation => 200
+2022-12-29 19:37:55,286 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 19:37:55,286 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 19:37:55,286 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 19:37:55,286 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 19:37:55,286 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 19:37:55,286 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 19:37:55,286 - expose_command[183305][139901393540672] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 19:37:55,287 - expose_command[183305][139901393540672] - INFO - action start_observation => 200
+2022-12-29 19:37:55,287 - expose_command[183305][139901393540672] - INFO - action start_observation => 200
+2022-12-29 19:37:55,287 - expose_command[183305][139901393540672] - INFO - action start_observation => 200
+2022-12-29 19:37:55,287 - expose_command[183305][139901393540672] - INFO - action start_observation => 200
+2022-12-29 19:37:55,287 - expose_command[183305][139901393540672] - INFO - action start_observation => 200
+2022-12-29 19:37:55,287 - expose_command[183305][139901393540672] - INFO - action start_observation => 200
+2022-12-29 19:37:55,287 - expose_command[183305][139901393540672] - INFO - action start_observation => 200
+2022-12-29 19:37:55,784 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:37:55,784 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:37:55,784 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:37:55,784 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:37:55,784 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:37:55,784 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:37:55,784 - expose_command[183305][139901393540672] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 19:37:55,786 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:55,786 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:55,786 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:55,786 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:55,786 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:55,786 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 19:37:55,786 - expose_command[183305][139901393540672] - INFO - action turn => 200
+2022-12-29 20:04:33,247 - expose_command[200167][140618183317056] - INFO - Starting process 'expose_command'
+2022-12-29 20:04:33,742 - expose_command[200167][140618183317056] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:04:33,742 - expose_command[200167][140618183317056] - INFO - action turn => 200
+2022-12-29 20:04:40,355 - expose_command[200167][140618183317056] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:04:40,356 - expose_command[200167][140618183317056] - INFO - action set_observation => 200
+2022-12-29 20:05:08,086 - expose_command[200167][140618183317056] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:05:08,087 - expose_command[200167][140618183317056] - INFO - action start_observation => 500
+2022-12-29 20:08:34,517 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:08:34,517 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:08:35,011 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:08:35,011 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:08:35,012 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:08:35,012 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:08:41,619 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:08:41,619 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:08:41,620 - expose_command[200167][140618191709760] - INFO - action set_observation => 200
+2022-12-29 20:08:41,620 - expose_command[200167][140618191709760] - INFO - action set_observation => 200
+2022-12-29 20:09:09,402 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:09:09,402 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:09:09,403 - expose_command[200167][140618191709760] - INFO - action start_observation => 200
+2022-12-29 20:09:09,403 - expose_command[200167][140618191709760] - INFO - action start_observation => 200
+2022-12-29 20:09:09,891 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:09:09,891 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:09:09,891 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:09:09,891 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:10:29,637 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:10:29,637 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:10:29,637 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:10:30,128 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:10:30,128 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:10:30,128 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:10:30,129 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:10:30,129 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:10:30,129 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:10:31,626 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:10:31,626 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:10:31,626 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:10:31,626 - expose_command[200167][140618191709760] - INFO - action set_observation => 200
+2022-12-29 20:10:31,626 - expose_command[200167][140618191709760] - INFO - action set_observation => 200
+2022-12-29 20:10:31,626 - expose_command[200167][140618191709760] - INFO - action set_observation => 200
+2022-12-29 20:10:59,265 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:10:59,265 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:10:59,265 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:10:59,266 - expose_command[200167][140618191709760] - INFO - action start_observation => 200
+2022-12-29 20:10:59,266 - expose_command[200167][140618191709760] - INFO - action start_observation => 200
+2022-12-29 20:10:59,266 - expose_command[200167][140618191709760] - INFO - action start_observation => 200
+2022-12-29 20:10:59,757 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:10:59,757 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:10:59,757 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:10:59,757 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:10:59,757 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:10:59,757 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:15:13,269 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:15:13,269 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:15:13,269 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:15:13,269 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:15:13,759 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:15:13,759 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:15:13,759 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:15:13,759 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:15:13,760 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:15:13,760 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:15:13,760 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:15:13,760 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:15:15,260 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:15:15,260 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:15:15,260 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:15:15,260 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:15:15,261 - expose_command[200167][140618191709760] - INFO - action set_observation => 200
+2022-12-29 20:15:15,261 - expose_command[200167][140618191709760] - INFO - action set_observation => 200
+2022-12-29 20:15:15,261 - expose_command[200167][140618191709760] - INFO - action set_observation => 200
+2022-12-29 20:15:15,261 - expose_command[200167][140618191709760] - INFO - action set_observation => 200
+2022-12-29 20:15:42,912 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:15:42,912 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:15:42,912 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:15:42,912 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:15:42,913 - expose_command[200167][140618191709760] - INFO - action start_observation => 200
+2022-12-29 20:15:42,913 - expose_command[200167][140618191709760] - INFO - action start_observation => 200
+2022-12-29 20:15:42,913 - expose_command[200167][140618191709760] - INFO - action start_observation => 200
+2022-12-29 20:15:42,913 - expose_command[200167][140618191709760] - INFO - action start_observation => 200
+2022-12-29 20:15:43,402 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:15:43,402 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:15:43,402 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:15:43,402 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:15:43,402 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:15:43,402 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:15:43,402 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:15:43,402 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:16:09,085 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:16:09,085 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:16:09,085 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:16:09,085 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:16:09,085 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:16:14,703 - expose_command[200167][140618191709760] - INFO - params = {'state': 'rest'}
+2022-12-29 20:16:14,703 - expose_command[200167][140618191709760] - INFO - params = {'state': 'rest'}
+2022-12-29 20:16:14,703 - expose_command[200167][140618191709760] - INFO - params = {'state': 'rest'}
+2022-12-29 20:16:14,703 - expose_command[200167][140618191709760] - INFO - params = {'state': 'rest'}
+2022-12-29 20:16:14,703 - expose_command[200167][140618191709760] - INFO - params = {'state': 'rest'}
+2022-12-29 20:16:14,705 - expose_command[200167][140618191709760] - INFO - action mirror_calibration => 200
+2022-12-29 20:16:14,705 - expose_command[200167][140618191709760] - INFO - action mirror_calibration => 200
+2022-12-29 20:16:14,705 - expose_command[200167][140618191709760] - INFO - action mirror_calibration => 200
+2022-12-29 20:16:14,705 - expose_command[200167][140618191709760] - INFO - action mirror_calibration => 200
+2022-12-29 20:16:14,705 - expose_command[200167][140618191709760] - INFO - action mirror_calibration => 200
+2022-12-29 20:16:17,116 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:16:17,116 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:16:17,116 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:16:17,116 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:16:17,116 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:16:17,116 - expose_command[200167][140618191709760] - INFO - Starting process 'expose_command'
+2022-12-29 20:16:17,606 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:16:17,606 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:16:17,606 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:16:17,606 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:16:17,606 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:16:17,606 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:16:17,607 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:16:17,607 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:16:17,607 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:16:17,607 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:16:17,607 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:16:17,607 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:16:24,222 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:16:24,222 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:16:24,222 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:16:24,222 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:16:24,222 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:16:24,222 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:16:24,224 - expose_command[200167][140618191709760] - INFO - action set_observation => 200
+2022-12-29 20:16:24,224 - expose_command[200167][140618191709760] - INFO - action set_observation => 200
+2022-12-29 20:16:24,224 - expose_command[200167][140618191709760] - INFO - action set_observation => 200
+2022-12-29 20:16:24,224 - expose_command[200167][140618191709760] - INFO - action set_observation => 200
+2022-12-29 20:16:24,224 - expose_command[200167][140618191709760] - INFO - action set_observation => 200
+2022-12-29 20:16:24,224 - expose_command[200167][140618191709760] - INFO - action set_observation => 200
+2022-12-29 20:16:51,858 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:16:51,858 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:16:51,858 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:16:51,858 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:16:51,858 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:16:51,858 - expose_command[200167][140618191709760] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:16:51,859 - expose_command[200167][140618191709760] - INFO - action start_observation => 200
+2022-12-29 20:16:51,859 - expose_command[200167][140618191709760] - INFO - action start_observation => 200
+2022-12-29 20:16:51,859 - expose_command[200167][140618191709760] - INFO - action start_observation => 200
+2022-12-29 20:16:51,859 - expose_command[200167][140618191709760] - INFO - action start_observation => 200
+2022-12-29 20:16:51,859 - expose_command[200167][140618191709760] - INFO - action start_observation => 200
+2022-12-29 20:16:51,859 - expose_command[200167][140618191709760] - INFO - action start_observation => 200
+2022-12-29 20:16:52,347 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:16:52,347 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:16:52,347 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:16:52,347 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:16:52,347 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:16:52,347 - expose_command[200167][140618191709760] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:16:52,349 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:16:52,349 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:16:52,349 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:16:52,349 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:16:52,349 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:16:52,349 - expose_command[200167][140618191709760] - INFO - action turn => 200
+2022-12-29 20:19:50,364 - expose_command[200167][140618200102464] - INFO - Starting process 'expose_command'
+2022-12-29 20:19:50,364 - expose_command[200167][140618200102464] - INFO - Starting process 'expose_command'
+2022-12-29 20:19:50,364 - expose_command[200167][140618200102464] - INFO - Starting process 'expose_command'
+2022-12-29 20:19:50,364 - expose_command[200167][140618200102464] - INFO - Starting process 'expose_command'
+2022-12-29 20:19:50,364 - expose_command[200167][140618200102464] - INFO - Starting process 'expose_command'
+2022-12-29 20:19:50,364 - expose_command[200167][140618200102464] - INFO - Starting process 'expose_command'
+2022-12-29 20:19:50,364 - expose_command[200167][140618200102464] - INFO - Starting process 'expose_command'
+2022-12-29 20:19:50,855 - expose_command[200167][140618200102464] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-29 20:19:50,855 - expose_command[200167][140618200102464] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-29 20:19:50,855 - expose_command[200167][140618200102464] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-29 20:19:50,855 - expose_command[200167][140618200102464] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-29 20:19:50,855 - expose_command[200167][140618200102464] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-29 20:19:50,855 - expose_command[200167][140618200102464] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-29 20:19:50,855 - expose_command[200167][140618200102464] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-29 20:19:50,858 - expose_command[200167][140618200102464] - INFO - action turn => 200
+2022-12-29 20:19:50,858 - expose_command[200167][140618200102464] - INFO - action turn => 200
+2022-12-29 20:19:50,858 - expose_command[200167][140618200102464] - INFO - action turn => 200
+2022-12-29 20:19:50,858 - expose_command[200167][140618200102464] - INFO - action turn => 200
+2022-12-29 20:19:50,858 - expose_command[200167][140618200102464] - INFO - action turn => 200
+2022-12-29 20:19:50,858 - expose_command[200167][140618200102464] - INFO - action turn => 200
+2022-12-29 20:19:50,858 - expose_command[200167][140618200102464] - INFO - action turn => 200
+2022-12-29 20:33:05,185 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:33:05,678 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:33:05,679 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:33:12,310 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:33:12,310 - expose_command[229692][140538166634048] - INFO - action set_observation => 200
+2022-12-29 20:33:40,094 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:33:40,094 - expose_command[229692][140538166634048] - INFO - action start_observation => 200
+2022-12-29 20:33:40,581 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:33:40,581 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:34:41,127 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:34:41,127 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:34:46,745 - expose_command[229692][140538166634048] - INFO - params = {'state': 'rest'}
+2022-12-29 20:34:46,745 - expose_command[229692][140538166634048] - INFO - params = {'state': 'rest'}
+2022-12-29 20:34:46,746 - expose_command[229692][140538166634048] - INFO - action mirror_calibration => 200
+2022-12-29 20:34:46,746 - expose_command[229692][140538166634048] - INFO - action mirror_calibration => 200
+2022-12-29 20:34:50,614 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:34:50,614 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:34:50,614 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:34:51,103 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:34:51,103 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:34:51,103 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:34:51,104 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:34:51,104 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:34:51,104 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:34:57,722 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_flat', 'sufix_name': 'Flat', 'exposure_time': 2, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:34:57,722 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_flat', 'sufix_name': 'Flat', 'exposure_time': 2, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:34:57,722 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_flat', 'sufix_name': 'Flat', 'exposure_time': 2, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:34:57,723 - expose_command[229692][140538166634048] - INFO - action set_observation => 200
+2022-12-29 20:34:57,723 - expose_command[229692][140538166634048] - INFO - action set_observation => 200
+2022-12-29 20:34:57,723 - expose_command[229692][140538166634048] - INFO - action set_observation => 200
+2022-12-29 20:35:02,476 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_flat', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:35:02,476 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_flat', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:35:02,476 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_flat', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:35:02,477 - expose_command[229692][140538166634048] - INFO - action start_observation => 200
+2022-12-29 20:35:02,477 - expose_command[229692][140538166634048] - INFO - action start_observation => 200
+2022-12-29 20:35:02,477 - expose_command[229692][140538166634048] - INFO - action start_observation => 200
+2022-12-29 20:35:03,030 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:35:03,030 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:35:03,030 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:35:03,031 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:35:03,031 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:35:03,031 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:35:14,639 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:35:14,639 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:35:14,639 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:35:14,639 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:35:15,226 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:35:15,226 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:35:15,226 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:35:15,226 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:35:15,227 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:35:15,227 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:35:15,227 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:35:15,227 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:35:16,838 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:35:16,838 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:35:16,838 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:35:16,838 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:35:16,839 - expose_command[229692][140538166634048] - INFO - action set_observation => 200
+2022-12-29 20:35:16,839 - expose_command[229692][140538166634048] - INFO - action set_observation => 200
+2022-12-29 20:35:16,839 - expose_command[229692][140538166634048] - INFO - action set_observation => 200
+2022-12-29 20:35:16,839 - expose_command[229692][140538166634048] - INFO - action set_observation => 200
+2022-12-29 20:35:44,656 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:35:44,656 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:35:44,656 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:35:44,656 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:35:44,657 - expose_command[229692][140538166634048] - INFO - action start_observation => 200
+2022-12-29 20:35:44,657 - expose_command[229692][140538166634048] - INFO - action start_observation => 200
+2022-12-29 20:35:44,657 - expose_command[229692][140538166634048] - INFO - action start_observation => 200
+2022-12-29 20:35:44,657 - expose_command[229692][140538166634048] - INFO - action start_observation => 200
+2022-12-29 20:35:45,196 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:35:45,196 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:35:45,196 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:35:45,196 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:35:45,196 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:35:45,196 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:35:45,196 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:35:45,196 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:36:32,846 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:36:32,846 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:36:32,846 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:36:32,846 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:36:32,846 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:36:38,460 - expose_command[229692][140538166634048] - INFO - params = {'state': 'rest'}
+2022-12-29 20:36:38,460 - expose_command[229692][140538166634048] - INFO - params = {'state': 'rest'}
+2022-12-29 20:36:38,460 - expose_command[229692][140538166634048] - INFO - params = {'state': 'rest'}
+2022-12-29 20:36:38,460 - expose_command[229692][140538166634048] - INFO - params = {'state': 'rest'}
+2022-12-29 20:36:38,460 - expose_command[229692][140538166634048] - INFO - params = {'state': 'rest'}
+2022-12-29 20:36:38,461 - expose_command[229692][140538166634048] - INFO - action mirror_calibration => 200
+2022-12-29 20:36:38,461 - expose_command[229692][140538166634048] - INFO - action mirror_calibration => 200
+2022-12-29 20:36:38,461 - expose_command[229692][140538166634048] - INFO - action mirror_calibration => 200
+2022-12-29 20:36:38,461 - expose_command[229692][140538166634048] - INFO - action mirror_calibration => 200
+2022-12-29 20:36:38,461 - expose_command[229692][140538166634048] - INFO - action mirror_calibration => 200
+2022-12-29 20:56:27,215 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:56:27,215 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:56:27,215 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:56:27,215 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:56:27,215 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:56:27,215 - expose_command[229692][140538166634048] - INFO - Starting process 'expose_command'
+2022-12-29 20:56:27,704 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:56:27,704 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:56:27,704 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:56:27,704 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:56:27,704 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:56:27,704 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 20:56:27,706 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:56:27,706 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:56:27,706 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:56:27,706 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:56:27,706 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:56:27,706 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:56:34,308 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:56:34,308 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:56:34,308 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:56:34,308 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:56:34,308 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:56:34,308 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 20:56:34,309 - expose_command[229692][140538166634048] - INFO - action set_observation => 200
+2022-12-29 20:56:34,309 - expose_command[229692][140538166634048] - INFO - action set_observation => 200
+2022-12-29 20:56:34,309 - expose_command[229692][140538166634048] - INFO - action set_observation => 200
+2022-12-29 20:56:34,309 - expose_command[229692][140538166634048] - INFO - action set_observation => 200
+2022-12-29 20:56:34,309 - expose_command[229692][140538166634048] - INFO - action set_observation => 200
+2022-12-29 20:56:34,309 - expose_command[229692][140538166634048] - INFO - action set_observation => 200
+2022-12-29 20:57:01,992 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:57:01,992 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:57:01,992 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:57:01,992 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:57:01,992 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:57:01,992 - expose_command[229692][140538166634048] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 20:57:01,993 - expose_command[229692][140538166634048] - INFO - action start_observation => 200
+2022-12-29 20:57:01,993 - expose_command[229692][140538166634048] - INFO - action start_observation => 200
+2022-12-29 20:57:01,993 - expose_command[229692][140538166634048] - INFO - action start_observation => 200
+2022-12-29 20:57:01,993 - expose_command[229692][140538166634048] - INFO - action start_observation => 200
+2022-12-29 20:57:01,993 - expose_command[229692][140538166634048] - INFO - action start_observation => 200
+2022-12-29 20:57:01,993 - expose_command[229692][140538166634048] - INFO - action start_observation => 200
+2022-12-29 20:57:02,480 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:57:02,480 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:57:02,480 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:57:02,480 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:57:02,480 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:57:02,480 - expose_command[229692][140538166634048] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 20:57:02,481 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:57:02,481 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:57:02,481 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:57:02,481 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:57:02,481 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 20:57:02,481 - expose_command[229692][140538166634048] - INFO - action turn => 200
+2022-12-29 21:21:02,388 - expose_command[263454][140203322996288] - INFO - Starting process 'expose_command'
+2022-12-29 21:21:02,878 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 21:21:02,879 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:21:04,365 - expose_command[263454][140203322996288] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 21:21:04,366 - expose_command[263454][140203322996288] - INFO - action set_observation => 200
+2022-12-29 21:21:32,038 - expose_command[263454][140203322996288] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 21:21:32,038 - expose_command[263454][140203322996288] - INFO - action start_observation => 200
+2022-12-29 21:21:32,526 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 21:21:32,526 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:21:51,899 - expose_command[263454][140203322996288] - INFO - Starting process 'expose_command'
+2022-12-29 21:21:51,899 - expose_command[263454][140203322996288] - INFO - Starting process 'expose_command'
+2022-12-29 21:21:52,389 - expose_command[263454][140203322996288] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-29 21:21:52,389 - expose_command[263454][140203322996288] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-29 21:21:52,390 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:21:52,390 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:22:26,697 - expose_command[263454][140203322996288] - INFO - Starting process 'expose_command'
+2022-12-29 21:22:26,697 - expose_command[263454][140203322996288] - INFO - Starting process 'expose_command'
+2022-12-29 21:22:26,697 - expose_command[263454][140203322996288] - INFO - Starting process 'expose_command'
+2022-12-29 21:22:32,307 - expose_command[263454][140203322996288] - INFO - params = {'state': 'rest'}
+2022-12-29 21:22:32,307 - expose_command[263454][140203322996288] - INFO - params = {'state': 'rest'}
+2022-12-29 21:22:32,307 - expose_command[263454][140203322996288] - INFO - params = {'state': 'rest'}
+2022-12-29 21:22:32,308 - expose_command[263454][140203322996288] - INFO - action mirror_calibration => 200
+2022-12-29 21:22:32,308 - expose_command[263454][140203322996288] - INFO - action mirror_calibration => 200
+2022-12-29 21:22:32,308 - expose_command[263454][140203322996288] - INFO - action mirror_calibration => 200
+2022-12-29 21:22:37,977 - expose_command[263454][140203322996288] - INFO - Starting process 'expose_command'
+2022-12-29 21:22:37,977 - expose_command[263454][140203322996288] - INFO - Starting process 'expose_command'
+2022-12-29 21:22:37,977 - expose_command[263454][140203322996288] - INFO - Starting process 'expose_command'
+2022-12-29 21:22:37,977 - expose_command[263454][140203322996288] - INFO - Starting process 'expose_command'
+2022-12-29 21:22:38,464 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 21:22:38,464 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 21:22:38,464 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 21:22:38,464 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 21:22:38,465 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:22:38,465 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:22:38,465 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:22:38,465 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:22:41,969 - expose_command[263454][140203322996288] - INFO - Starting process 'expose_command'
+2022-12-29 21:22:41,969 - expose_command[263454][140203322996288] - INFO - Starting process 'expose_command'
+2022-12-29 21:22:41,969 - expose_command[263454][140203322996288] - INFO - Starting process 'expose_command'
+2022-12-29 21:22:41,969 - expose_command[263454][140203322996288] - INFO - Starting process 'expose_command'
+2022-12-29 21:22:41,969 - expose_command[263454][140203322996288] - INFO - Starting process 'expose_command'
+2022-12-29 21:22:42,459 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 21:22:42,459 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 21:22:42,459 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 21:22:42,459 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 21:22:42,459 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 21:22:42,460 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:22:42,460 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:22:42,460 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:22:42,460 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:22:42,460 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:22:49,067 - expose_command[263454][140203322996288] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 21:22:49,067 - expose_command[263454][140203322996288] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 21:22:49,067 - expose_command[263454][140203322996288] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 21:22:49,067 - expose_command[263454][140203322996288] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 21:22:49,067 - expose_command[263454][140203322996288] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 21:22:49,068 - expose_command[263454][140203322996288] - INFO - action set_observation => 200
+2022-12-29 21:22:49,068 - expose_command[263454][140203322996288] - INFO - action set_observation => 200
+2022-12-29 21:22:49,068 - expose_command[263454][140203322996288] - INFO - action set_observation => 200
+2022-12-29 21:22:49,068 - expose_command[263454][140203322996288] - INFO - action set_observation => 200
+2022-12-29 21:22:49,068 - expose_command[263454][140203322996288] - INFO - action set_observation => 200
+2022-12-29 21:23:16,722 - expose_command[263454][140203322996288] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 21:23:16,722 - expose_command[263454][140203322996288] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 21:23:16,722 - expose_command[263454][140203322996288] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 21:23:16,722 - expose_command[263454][140203322996288] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 21:23:16,722 - expose_command[263454][140203322996288] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 21:23:16,723 - expose_command[263454][140203322996288] - INFO - action start_observation => 200
+2022-12-29 21:23:16,723 - expose_command[263454][140203322996288] - INFO - action start_observation => 200
+2022-12-29 21:23:16,723 - expose_command[263454][140203322996288] - INFO - action start_observation => 200
+2022-12-29 21:23:16,723 - expose_command[263454][140203322996288] - INFO - action start_observation => 200
+2022-12-29 21:23:16,723 - expose_command[263454][140203322996288] - INFO - action start_observation => 200
+2022-12-29 21:23:17,210 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 21:23:17,210 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 21:23:17,210 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 21:23:17,210 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 21:23:17,210 - expose_command[263454][140203322996288] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 21:23:17,211 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:23:17,211 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:23:17,211 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:23:17,211 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 21:23:17,211 - expose_command[263454][140203322996288] - INFO - action turn => 200
+2022-12-29 22:55:24,446 - expose_command[4989][140392011920960] - INFO - Starting process 'expose_command'
+2022-12-29 22:55:25,037 - expose_command[4989][140392011920960] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2022-12-29 22:55:25,039 - expose_command[4989][140392011920960] - INFO - action turn => 200
+2022-12-29 22:55:31,596 - expose_command[4989][140392011920960] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2022-12-29 22:55:31,598 - expose_command[4989][140392011920960] - INFO - action set_observation => 200
+2022-12-29 22:55:59,652 - expose_command[4989][140392011920960] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2022-12-29 22:55:59,653 - expose_command[4989][140392011920960] - INFO - action start_observation => 200
+2022-12-29 22:56:00,268 - expose_command[4989][140392011920960] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 22:56:00,269 - expose_command[4989][140392011920960] - INFO - action turn => 200
+2022-12-29 22:56:28,890 - expose_command[4989][140392011920960] - INFO - Starting process 'expose_command'
+2022-12-29 22:56:28,890 - expose_command[4989][140392011920960] - INFO - Starting process 'expose_command'
+2022-12-29 22:56:29,562 - expose_command[4989][140392011920960] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-29 22:56:29,562 - expose_command[4989][140392011920960] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2022-12-29 22:56:29,562 - expose_command[4989][140392011920960] - INFO - action turn => 200
+2022-12-29 22:56:29,562 - expose_command[4989][140392011920960] - INFO - action turn => 200
+2022-12-29 23:02:41,907 - expose_command[4989][140392011920960] - INFO - Starting process 'expose_command'
+2022-12-29 23:02:41,907 - expose_command[4989][140392011920960] - INFO - Starting process 'expose_command'
+2022-12-29 23:02:41,907 - expose_command[4989][140392011920960] - INFO - Starting process 'expose_command'
+2022-12-29 23:02:42,503 - expose_command[4989][140392011920960] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 23:02:42,503 - expose_command[4989][140392011920960] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 23:02:42,503 - expose_command[4989][140392011920960] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2022-12-29 23:02:42,505 - expose_command[4989][140392011920960] - INFO - action turn => 200
+2022-12-29 23:02:42,505 - expose_command[4989][140392011920960] - INFO - action turn => 200
+2022-12-29 23:02:42,505 - expose_command[4989][140392011920960] - INFO - action turn => 200
+2022-12-29 23:02:46,199 - expose_command[4989][140392011920960] - INFO - Starting process 'expose_command'
+2022-12-29 23:02:46,199 - expose_command[4989][140392011920960] - INFO - Starting process 'expose_command'
+2022-12-29 23:02:46,199 - expose_command[4989][140392011920960] - INFO - Starting process 'expose_command'
+2022-12-29 23:02:46,199 - expose_command[4989][140392011920960] - INFO - Starting process 'expose_command'
+2022-12-29 23:02:51,946 - expose_command[4989][140392011920960] - INFO - params = {'state': 'rest'}
+2022-12-29 23:02:51,946 - expose_command[4989][140392011920960] - INFO - params = {'state': 'rest'}
+2022-12-29 23:02:51,946 - expose_command[4989][140392011920960] - INFO - params = {'state': 'rest'}
+2022-12-29 23:02:51,946 - expose_command[4989][140392011920960] - INFO - params = {'state': 'rest'}
+2022-12-29 23:02:51,950 - expose_command[4989][140392011920960] - INFO - action mirror_calibration => 200
+2022-12-29 23:02:51,950 - expose_command[4989][140392011920960] - INFO - action mirror_calibration => 200
+2022-12-29 23:02:51,950 - expose_command[4989][140392011920960] - INFO - action mirror_calibration => 200
+2022-12-29 23:02:51,950 - expose_command[4989][140392011920960] - INFO - action mirror_calibration => 200
+2023-01-10 07:51:06,848 - expose_command[4701][139961546184256] - INFO - Starting process 'expose_command'
+2023-01-10 07:51:07,377 - expose_command[4701][139961546184256] - INFO - params = {'turn': True, 'lamp': 'ThAr'}
+2023-01-10 07:51:07,377 - expose_command[4701][139961546184256] - INFO - action turn => 200
+2023-01-10 07:51:09,377 - expose_command[4701][139961546184256] - INFO - Starting process 'expose_command'
+2023-01-10 07:51:09,377 - expose_command[4701][139961546184256] - INFO - Starting process 'expose_command'
+2023-01-10 07:51:09,845 - expose_command[4701][139961546184256] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2023-01-10 07:51:09,845 - expose_command[4701][139961546184256] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2023-01-10 07:51:09,845 - expose_command[4701][139961546184256] - INFO - action turn => 200
+2023-01-10 07:51:09,845 - expose_command[4701][139961546184256] - INFO - action turn => 200
+2023-01-10 07:51:16,922 - expose_command[4701][139961546184256] - INFO - Starting process 'expose_command'
+2023-01-10 07:51:16,922 - expose_command[4701][139961546184256] - INFO - Starting process 'expose_command'
+2023-01-10 07:51:16,922 - expose_command[4701][139961546184256] - INFO - Starting process 'expose_command'
+2023-01-10 07:51:17,396 - expose_command[4701][139961546184256] - INFO - params = {'state': 'rest'}
+2023-01-10 07:51:17,396 - expose_command[4701][139961546184256] - INFO - params = {'state': 'rest'}
+2023-01-10 07:51:17,396 - expose_command[4701][139961546184256] - INFO - params = {'state': 'rest'}
+2023-01-10 07:51:17,396 - expose_command[4701][139961546184256] - INFO - action mirror_calibration => 200
+2023-01-10 07:51:17,396 - expose_command[4701][139961546184256] - INFO - action mirror_calibration => 200
+2023-01-10 07:51:17,396 - expose_command[4701][139961546184256] - INFO - action mirror_calibration => 200
+2023-01-10 07:51:17,870 - expose_command[4701][139961546184256] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2023-01-10 07:51:17,870 - expose_command[4701][139961546184256] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2023-01-10 07:51:17,870 - expose_command[4701][139961546184256] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2023-01-10 07:51:17,871 - expose_command[4701][139961546184256] - INFO - action turn => 200
+2023-01-10 07:51:17,871 - expose_command[4701][139961546184256] - INFO - action turn => 200
+2023-01-10 07:51:17,871 - expose_command[4701][139961546184256] - INFO - action turn => 200
+2023-01-10 07:51:18,342 - expose_command[4701][139961546184256] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2023-01-10 07:51:18,342 - expose_command[4701][139961546184256] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2023-01-10 07:51:18,342 - expose_command[4701][139961546184256] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2023-01-10 07:51:18,342 - expose_command[4701][139961546184256] - INFO - action turn => 200
+2023-01-10 07:51:18,342 - expose_command[4701][139961546184256] - INFO - action turn => 200
+2023-01-10 07:51:18,342 - expose_command[4701][139961546184256] - INFO - action turn => 200
+2023-01-10 07:51:19,818 - expose_command[4701][139961546184256] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2023-01-10 07:51:19,818 - expose_command[4701][139961546184256] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2023-01-10 07:51:19,818 - expose_command[4701][139961546184256] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2023-01-10 07:51:19,818 - expose_command[4701][139961546184256] - INFO - action set_observation => 200
+2023-01-10 07:51:19,818 - expose_command[4701][139961546184256] - INFO - action set_observation => 200
+2023-01-10 07:51:19,818 - expose_command[4701][139961546184256] - INFO - action set_observation => 200
+2023-01-10 07:51:23,851 - expose_command[4701][139961546184256] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1, 'delay': 0}
+2023-01-10 07:51:23,851 - expose_command[4701][139961546184256] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1, 'delay': 0}
+2023-01-10 07:51:23,851 - expose_command[4701][139961546184256] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1, 'delay': 0}
+2023-01-10 07:51:23,852 - expose_command[4701][139961546184256] - INFO - action start_observation => 200
+2023-01-10 07:51:23,852 - expose_command[4701][139961546184256] - INFO - action start_observation => 200
+2023-01-10 07:51:23,852 - expose_command[4701][139961546184256] - INFO - action start_observation => 200
+2023-01-10 07:55:38,020 - expose_command[8764][140108446193216] - INFO - Starting process 'expose_command'
+2023-01-10 07:55:38,495 - expose_command[8764][140108446193216] - INFO - params = {'state': 'rest'}
+2023-01-10 07:55:38,496 - expose_command[8764][140108446193216] - INFO - action mirror_calibration => 200
+2023-01-10 07:55:38,966 - expose_command[8764][140108446193216] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2023-01-10 07:55:38,966 - expose_command[8764][140108446193216] - INFO - action turn => 200
+2023-01-10 07:55:39,435 - expose_command[8764][140108446193216] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2023-01-10 07:55:39,436 - expose_command[8764][140108446193216] - INFO - action turn => 200
+2023-01-10 07:55:40,910 - expose_command[8764][140108446193216] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2023-01-10 07:55:40,910 - expose_command[8764][140108446193216] - INFO - action set_observation => 200
+2023-01-10 07:55:43,524 - expose_command[8764][140108446193216] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1, 'delay': 0}
+2023-01-10 07:55:43,525 - expose_command[8764][140108446193216] - INFO - action start_observation => 200
+2023-01-10 07:55:54,274 - expose_command[8764][140108446193216] - INFO - Starting process 'expose_command'
+2023-01-10 07:55:54,274 - expose_command[8764][140108446193216] - INFO - Starting process 'expose_command'
+2023-01-10 07:55:54,746 - expose_command[8764][140108446193216] - INFO - params = {'state': 'rest'}
+2023-01-10 07:55:54,746 - expose_command[8764][140108446193216] - INFO - params = {'state': 'rest'}
+2023-01-10 07:55:54,746 - expose_command[8764][140108446193216] - INFO - action mirror_calibration => 200
+2023-01-10 07:55:54,746 - expose_command[8764][140108446193216] - INFO - action mirror_calibration => 200
+2023-01-10 07:55:55,216 - expose_command[8764][140108446193216] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2023-01-10 07:55:55,216 - expose_command[8764][140108446193216] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2023-01-10 07:55:55,216 - expose_command[8764][140108446193216] - INFO - action turn => 200
+2023-01-10 07:55:55,216 - expose_command[8764][140108446193216] - INFO - action turn => 200
+2023-01-10 07:55:55,687 - expose_command[8764][140108446193216] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2023-01-10 07:55:55,687 - expose_command[8764][140108446193216] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2023-01-10 07:55:55,687 - expose_command[8764][140108446193216] - INFO - action turn => 200
+2023-01-10 07:55:55,687 - expose_command[8764][140108446193216] - INFO - action turn => 200
+2023-01-10 07:55:57,161 - expose_command[8764][140108446193216] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2023-01-10 07:55:57,161 - expose_command[8764][140108446193216] - INFO - params = {'observation_type': 'bias', 'sufix_name': 'Bias', 'exposure_time': 1e-07, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2023-01-10 07:55:57,161 - expose_command[8764][140108446193216] - INFO - action set_observation => 200
+2023-01-10 07:55:57,161 - expose_command[8764][140108446193216] - INFO - action set_observation => 200
+2023-01-10 07:55:59,799 - expose_command[8764][140108446193216] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1, 'delay': 0}
+2023-01-10 07:55:59,799 - expose_command[8764][140108446193216] - INFO - params = {'observation_type': 'bias', 'number_exposures': 1, 'delay': 0}
+2023-01-10 07:55:59,799 - expose_command[8764][140108446193216] - INFO - action start_observation => 200
+2023-01-10 07:55:59,799 - expose_command[8764][140108446193216] - INFO - action start_observation => 200
+2023-01-10 07:56:48,454 - expose_command[10960][140059112785472] - INFO - Starting process 'expose_command'
+2023-01-10 07:56:48,930 - expose_command[10960][140059112785472] - INFO - params = {'turn': False, 'lamp': 'Led'}
+2023-01-10 07:56:48,930 - expose_command[10960][140059112785472] - INFO - action turn => 200
+2023-01-10 07:56:55,522 - expose_command[10960][140059112785472] - INFO - params = {'observation_type': 'calibration_thar', 'sufix_name': 'Comp', 'exposure_time': 25, 'comment1': 'a', 'comment2': 'b', 'obj_name': 'c'}
+2023-01-10 07:56:55,523 - expose_command[10960][140059112785472] - INFO - action set_observation => 200
+2023-01-10 07:57:23,353 - expose_command[10960][140059112785472] - INFO - params = {'observation_type': 'calibration_thar', 'number_exposures': 1, 'delay': 0}
+2023-01-10 07:57:23,353 - expose_command[10960][140059112785472] - INFO - action start_observation => 200
+2023-01-10 07:57:23,820 - expose_command[10960][140059112785472] - INFO - params = {'turn': False, 'lamp': 'ThAr'}
+2023-01-10 07:57:23,820 - expose_command[10960][140059112785472] - INFO - action turn => 200
+2023-01-10 07:57:40,505 - expose_command[10960][140059112785472] - INFO - Starting process 'expose_command'
+2023-01-10 07:57:40,505 - expose_command[10960][140059112785472] - INFO - Starting process 'expose_command'
+2023-01-10 07:57:46,105 - expose_command[10960][140059112785472] - INFO - params = {'state': 'rest'}
+2023-01-10 07:57:46,105 - expose_command[10960][140059112785472] - INFO - params = {'state': 'rest'}
+2023-01-10 07:57:46,106 - expose_command[10960][140059112785472] - INFO - action mirror_calibration => 200
+2023-01-10 07:57:46,106 - expose_command[10960][140059112785472] - INFO - action mirror_calibration => 200

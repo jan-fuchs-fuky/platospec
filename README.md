@@ -36,16 +36,36 @@ $ mkdir -p /data/pucheros_sci/
 
 ## Ubuntu 22.04.1 LTS (jammy)
 
-### Download all-in-one package
+### Download all-in-one packages
 
-The easiest way to run all programs.
+The easiest way to run all programs. Copy all from directory packages to /opt.
 
 ```
 # apt install xpa-tools saods9
+```
 
-$ /opt/e152_watchdog/bin/e152_watchdog
-$ /opt/indi_autoguider/bin/indi_autoguider
+Telescope Control GUI
+
+```
 $ /opt/ascol_client/bin/ascol_client
+```
+
+Pucheros Autoguider GUI
+
+```
+$ /opt/indi_autoguider/bin/indi_autoguider
+```
+
+Pucheros Expose GUI
+
+```
+$ /opt/pucheros_expose_gui/bin/pucheros_expose
+```
+
+E152 Watchdog GUI
+
+```
+$ /opt/e152_watchdog/bin/e152_watchdog
 ```
 
 ## Debian GNU/Linux 11 (bullseye)

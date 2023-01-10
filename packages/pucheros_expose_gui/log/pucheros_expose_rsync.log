@@ -1,0 +1,511 @@
+2022-12-19 13:07:08,123 - rsync[250913][140307588970240] - INFO - Starting process 'rsync'
+2022-12-19 13:07:08,123 - rsync[250913][140307588970240] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-19', '/data/pucheros_sci/']
+2022-12-19 13:07:13,146 - rsync[250913][140307588970240] - ERROR - Call command failed: 23
+2022-12-19 13:07:13,160 - rsync[250913][140307588970240] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-19'
+2022-12-19 13:07:18,163 - rsync[250913][140307588970240] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-19', '/data/pucheros_sci/']
+2022-12-19 13:07:23,170 - rsync[250913][140307588970240] - ERROR - Call command failed: 23
+2022-12-19 13:07:23,170 - rsync[250913][140307588970240] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-19'
+2022-12-19 13:07:28,175 - rsync[250913][140307588970240] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-19', '/data/pucheros_sci/']
+2022-12-19 13:07:33,181 - rsync[250913][140307588970240] - ERROR - Call command failed: 23
+2022-12-19 13:07:33,182 - rsync[250913][140307588970240] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-19'
+2022-12-19 13:07:38,187 - rsync[250913][140307588970240] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-19', '/data/pucheros_sci/']
+2022-12-19 13:07:43,194 - rsync[250913][140307588970240] - ERROR - Call command failed: 23
+2022-12-19 13:07:43,195 - rsync[250913][140307588970240] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-19'
+2022-12-19 13:07:48,199 - rsync[250913][140307588970240] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-19', '/data/pucheros_sci/']
+2022-12-19 13:07:53,205 - rsync[250913][140307588970240] - ERROR - Call command failed: 23
+2022-12-19 13:07:53,206 - rsync[250913][140307588970240] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-19'
+2022-12-19 13:07:58,211 - rsync[250913][140307588970240] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-19', '/data/pucheros_sci/']
+2022-12-19 13:08:03,220 - rsync[250913][140307588970240] - ERROR - Call command failed: 23
+2022-12-19 13:08:03,220 - rsync[250913][140307588970240] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-19'
+2022-12-19 13:08:08,223 - rsync[250913][140307588970240] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-19', '/data/pucheros_sci/']
+2022-12-19 13:08:13,230 - rsync[250913][140307588970240] - ERROR - Call command failed: 23
+2022-12-19 13:08:13,230 - rsync[250913][140307588970240] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-19'
+2022-12-19 13:08:18,235 - rsync[250913][140307588970240] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-19', '/data/pucheros_sci/']
+2022-12-19 13:08:23,245 - rsync[250913][140307588970240] - ERROR - Call command failed: 23
+2022-12-19 13:08:23,245 - rsync[250913][140307588970240] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-19'
+2022-12-19 13:08:28,251 - rsync[250913][140307588970240] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-19', '/data/pucheros_sci/']
+2022-12-19 13:08:33,258 - rsync[250913][140307588970240] - ERROR - Call command failed: 23
+2022-12-19 13:08:33,258 - rsync[250913][140307588970240] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-19'
+2022-12-19 13:08:38,263 - rsync[250913][140307588970240] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-19', '/data/pucheros_sci/']
+2022-12-19 13:08:43,272 - rsync[250913][140307588970240] - ERROR - Call command failed: 23
+2022-12-19 13:08:43,272 - rsync[250913][140307588970240] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-19'
+2022-12-19 13:08:48,275 - rsync[250913][140307588970240] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-19', '/data/pucheros_sci/']
+2022-12-19 13:08:53,285 - rsync[250913][140307588970240] - ERROR - Call command failed: 23
+2022-12-19 13:08:53,285 - rsync[250913][140307588970240] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-19'
+2022-12-19 13:08:58,291 - rsync[250913][140307588970240] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-19', '/data/pucheros_sci/']
+2022-12-19 13:09:03,296 - rsync[250913][140307588970240] - ERROR - Call command failed: 23
+2022-12-19 13:09:03,297 - rsync[250913][140307588970240] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-19'
+2022-12-19 13:09:08,299 - rsync[250913][140307588970240] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-19', '/data/pucheros_sci/']
+2022-12-19 13:09:13,306 - rsync[250913][140307588970240] - ERROR - Call command failed: 23
+2022-12-19 13:09:13,307 - rsync[250913][140307588970240] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-19'
+2022-12-20 10:30:17,743 - rsync[256752][139733850113792] - INFO - Starting process 'rsync'
+2022-12-20 10:30:17,743 - rsync[256752][139733850113792] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-20', '/data/pucheros_sci/']
+2022-12-20 10:30:22,751 - rsync[256752][139733850113792] - ERROR - Call command failed: 23
+2022-12-20 10:30:22,752 - rsync[256752][139733850113792] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-20'
+2022-12-20 10:30:27,755 - rsync[256752][139733850113792] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-20', '/data/pucheros_sci/']
+2022-12-20 10:30:32,763 - rsync[256752][139733850113792] - ERROR - Call command failed: 23
+2022-12-20 10:30:32,765 - rsync[256752][139733850113792] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-20'
+2022-12-20 10:30:37,771 - rsync[256752][139733850113792] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-20', '/data/pucheros_sci/']
+2022-12-20 10:30:42,777 - rsync[256752][139733850113792] - ERROR - Call command failed: 23
+2022-12-20 10:30:42,778 - rsync[256752][139733850113792] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-20'
+2022-12-20 10:30:47,783 - rsync[256752][139733850113792] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-20', '/data/pucheros_sci/']
+2022-12-20 10:30:52,790 - rsync[256752][139733850113792] - ERROR - Call command failed: 23
+2022-12-20 10:30:52,790 - rsync[256752][139733850113792] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-20'
+2022-12-20 10:30:57,795 - rsync[256752][139733850113792] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-20', '/data/pucheros_sci/']
+2022-12-20 10:31:03,804 - rsync[256752][139733850113792] - ERROR - Call command failed: 23
+2022-12-20 10:31:03,804 - rsync[256752][139733850113792] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-20'
+2022-12-20 10:31:08,807 - rsync[256752][139733850113792] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-20', '/data/pucheros_sci/']
+2022-12-20 10:31:39,838 - rsync[256752][139733850113792] - INFO - Call command was successful
+2022-12-20 10:31:39,839 - rsync[256752][139733850113792] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-20/2022-12-20T09:31:00.001486-.fits']
+2022-12-29 19:20:38,496 - rsync[178637][140404960851520] - INFO - Starting process 'rsync'
+2022-12-29 19:21:05,718 - rsync[178874][140349171287616] - INFO - Starting process 'rsync'
+2022-12-29 19:21:05,718 - rsync[178874][140349171287616] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:21:11,735 - rsync[178874][140349171287616] - ERROR - Call command failed: 23
+2022-12-29 19:21:11,737 - rsync[178874][140349171287616] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:22:01,356 - rsync[179156][139880440247872] - INFO - Starting process 'rsync'
+2022-12-29 19:22:01,356 - rsync[179156][139880440247872] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:22:06,375 - rsync[179156][139880440247872] - ERROR - Call command failed: 23
+2022-12-29 19:22:06,377 - rsync[179156][139880440247872] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:22:11,385 - rsync[179156][139880440247872] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:22:16,398 - rsync[179156][139880440247872] - ERROR - Call command failed: 23
+2022-12-29 19:22:16,399 - rsync[179156][139880440247872] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:23:13,534 - rsync[179614][139792550504000] - INFO - Starting process 'rsync'
+2022-12-29 19:23:13,535 - rsync[179614][139792550504000] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:23:18,550 - rsync[179614][139792550504000] - ERROR - Call command failed: 23
+2022-12-29 19:23:18,551 - rsync[179614][139792550504000] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:23:23,561 - rsync[179614][139792550504000] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:23:28,576 - rsync[179614][139792550504000] - ERROR - Call command failed: 23
+2022-12-29 19:23:28,576 - rsync[179614][139792550504000] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:23:33,584 - rsync[179614][139792550504000] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:23:38,598 - rsync[179614][139792550504000] - ERROR - Call command failed: 23
+2022-12-29 19:23:38,599 - rsync[179614][139792550504000] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:23:43,604 - rsync[179614][139792550504000] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:23:48,625 - rsync[179614][139792550504000] - ERROR - Call command failed: 23
+2022-12-29 19:23:48,626 - rsync[179614][139792550504000] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:23:53,635 - rsync[179614][139792550504000] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:23:58,650 - rsync[179614][139792550504000] - ERROR - Call command failed: 23
+2022-12-29 19:23:58,651 - rsync[179614][139792550504000] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:36:33,041 - rsync[183305][139902156064320] - INFO - Starting process 'rsync'
+2022-12-29 19:36:33,041 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:36:38,061 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:36:38,062 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:36:43,072 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:36:48,084 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:36:48,085 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:36:53,093 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:36:58,107 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:36:58,108 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:37:03,118 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:37:08,134 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:37:08,135 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:37:13,140 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:37:18,156 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:37:18,157 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:37:23,168 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:37:28,184 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:37:28,185 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:37:33,196 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:37:38,212 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:37:38,213 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:37:43,224 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:37:48,239 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:37:48,240 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:37:53,251 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:37:58,266 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:37:58,267 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:38:03,278 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:38:08,294 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:38:08,295 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:38:13,306 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:38:18,321 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:38:18,322 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:38:23,331 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:38:28,344 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:38:28,346 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:38:33,355 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:38:38,370 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:38:38,371 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:38:43,376 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:38:48,388 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:38:48,390 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:38:53,401 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:38:58,414 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:38:58,415 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:39:03,424 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:39:08,440 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:39:08,441 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:39:13,448 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:39:18,463 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:39:18,464 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:39:23,474 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:39:28,489 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:39:28,490 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:39:33,500 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:39:38,517 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:39:38,518 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:39:43,527 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:39:48,550 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:39:48,551 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:39:53,560 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:39:58,575 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:39:58,576 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:40:03,584 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:40:08,603 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:40:08,605 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:40:13,614 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:40:18,634 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:40:18,635 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:40:23,645 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:40:28,659 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:40:28,660 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:40:33,669 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:40:38,685 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:40:38,686 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:40:43,696 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:40:48,718 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:40:48,719 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 19:40:53,729 - rsync[183305][139902156064320] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-29', '/data/pucheros_sci/']
+2022-12-29 19:40:58,743 - rsync[183305][139902156064320] - ERROR - Call command failed: 23
+2022-12-29 19:40:58,745 - rsync[183305][139902156064320] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2022-12-29'
+2022-12-29 20:04:29,189 - rsync[200167][140618948163136] - INFO - Starting process 'rsync'
+2022-12-29 20:04:29,189 - rsync[200167][140618948163136] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-30', '/data/pucheros_sci/']
+2022-12-29 20:04:38,208 - rsync[200167][140618948163136] - INFO - Call command was successful
+2022-12-29 20:04:38,211 - rsync[200167][140618948163136] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-30/2022-12-29T18:37:27.852522-Comp.fits']
+2022-12-29 20:09:10,754 - rsync[200167][140618948163136] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-30', '/data/pucheros_sci/']
+2022-12-29 20:09:18,778 - rsync[200167][140618948163136] - INFO - Call command was successful
+2022-12-29 20:09:18,780 - rsync[200167][140618948163136] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-30/2022-12-29T19:08:41.985556-Comp.fits']
+2022-12-29 20:10:59,987 - rsync[200167][140618948163136] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-30', '/data/pucheros_sci/']
+2022-12-29 20:11:08,010 - rsync[200167][140618948163136] - INFO - Call command was successful
+2022-12-29 20:11:08,010 - rsync[200167][140618948163136] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-30/2022-12-29T19:10:31.994574-Comp.fits']
+2022-12-29 20:15:43,426 - rsync[200167][140618948163136] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-30', '/data/pucheros_sci/']
+2022-12-29 20:15:51,452 - rsync[200167][140618948163136] - INFO - Call command was successful
+2022-12-29 20:15:51,455 - rsync[200167][140618948163136] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-30/2022-12-29T19:15:15.626073-Comp.fits']
+2022-12-29 20:16:52,568 - rsync[200167][140618948163136] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-30', '/data/pucheros_sci/']
+2022-12-29 20:17:00,585 - rsync[200167][140618948163136] - INFO - Call command was successful
+2022-12-29 20:17:00,587 - rsync[200167][140618948163136] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-30/2022-12-29T19:16:24.589759-Comp.fits']
+2022-12-29 20:33:00,311 - rsync[229692][140539206805056] - INFO - Starting process 'rsync'
+2022-12-29 20:33:00,312 - rsync[229692][140539206805056] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-30', '/data/pucheros_sci/']
+2022-12-29 20:33:06,333 - rsync[229692][140539206805056] - INFO - Call command was successful
+2022-12-29 20:33:06,336 - rsync[229692][140539206805056] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-30/2022-12-29T19:16:24.589759-Comp.fits']
+2022-12-29 20:33:41,416 - rsync[229692][140539206805056] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-30', '/data/pucheros_sci/']
+2022-12-29 20:33:49,436 - rsync[229692][140539206805056] - INFO - Call command was successful
+2022-12-29 20:33:49,439 - rsync[229692][140539206805056] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-30/2022-12-29T19:33:12.678326-Comp.fits']
+2022-12-29 20:35:03,572 - rsync[229692][140539206805056] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-30', '/data/pucheros_sci/']
+2022-12-29 20:35:13,594 - rsync[229692][140539206805056] - INFO - Call command was successful
+2022-12-29 20:35:13,597 - rsync[229692][140539206805056] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-30/2022-12-29T19:34:58.091189-Flat.fits']
+2022-12-29 20:35:45,670 - rsync[229692][140539206805056] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-30', '/data/pucheros_sci/']
+2022-12-29 20:35:59,700 - rsync[229692][140539206805056] - INFO - Call command was successful
+2022-12-29 20:35:59,703 - rsync[229692][140539206805056] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-30/2022-12-29T19:35:17.253871-Comp.fits']
+2022-12-29 20:57:02,546 - rsync[229692][140539206805056] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-30', '/data/pucheros_sci/']
+2022-12-29 20:57:10,565 - rsync[229692][140539206805056] - INFO - Call command was successful
+2022-12-29 20:57:10,566 - rsync[229692][140539206805056] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-30/2022-12-29T19:56:34.676653-Comp.fits']
+2022-12-29 21:20:59,873 - rsync[263454][140203751691840] - INFO - Starting process 'rsync'
+2022-12-29 21:20:59,874 - rsync[263454][140203751691840] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-30', '/data/pucheros_sci/']
+2022-12-29 21:21:05,889 - rsync[263454][140203751691840] - INFO - Call command was successful
+2022-12-29 21:21:05,891 - rsync[263454][140203751691840] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-30/2022-12-29T19:56:34.676653-Comp.fits']
+2022-12-29 21:21:32,967 - rsync[263454][140203751691840] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-30', '/data/pucheros_sci/']
+2022-12-29 21:21:40,986 - rsync[263454][140203751691840] - INFO - Call command was successful
+2022-12-29 21:21:40,989 - rsync[263454][140203751691840] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-30/2022-12-29T20:21:04.732015-Comp.fits']
+2022-12-29 21:23:18,155 - rsync[263454][140203751691840] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-30', '/data/pucheros_sci/']
+2022-12-29 21:23:26,175 - rsync[263454][140203751691840] - INFO - Call command was successful
+2022-12-29 21:23:26,178 - rsync[263454][140203751691840] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-30/2022-12-29T20:22:49.433695-Comp.fits']
+2022-12-29 22:55:21,091 - rsync[4989][140393043699264] - INFO - Starting process 'rsync'
+2022-12-29 22:55:21,144 - rsync[4989][140393043699264] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-30', '/data/pucheros_sci/']
+2022-12-29 22:55:28,172 - rsync[4989][140393043699264] - INFO - Call command was successful
+2022-12-29 22:55:28,175 - rsync[4989][140393043699264] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-30/2022-12-29T20:22:49.433695-Comp.fits']
+2022-12-29 22:56:00,353 - rsync[4989][140393043699264] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2022-12-30', '/data/pucheros_sci/']
+2022-12-29 22:56:10,378 - rsync[4989][140393043699264] - INFO - Call command was successful
+2022-12-29 22:56:10,381 - rsync[4989][140393043699264] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2022-12-30/2022-12-29T21:55:32.060169-Comp.fits']
+2023-01-09 08:39:47,549 - rsync[12206][139699538613824] - INFO - Starting process 'rsync'
+2023-01-09 08:39:47,601 - rsync[12206][139699538613824] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2023-01-09', '/data/pucheros_sci/']
+2023-01-09 08:39:52,616 - rsync[12206][139699538613824] - ERROR - Call command failed: 23
+2023-01-09 08:39:52,669 - rsync[12206][139699538613824] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2023-01-09'
+2023-01-09 08:39:57,677 - rsync[12206][139699538613824] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2023-01-09', '/data/pucheros_sci/']
+2023-01-09 08:40:02,691 - rsync[12206][139699538613824] - ERROR - Call command failed: 23
+2023-01-09 08:40:02,692 - rsync[12206][139699538613824] - ERROR - rsync failed
+Traceback (most recent call last):
+  File "pucheros_expose.py", line 348, in run
+  File "pucheros_expose.py", line 326, in run_rsync
+  File "pucheros_expose.py", line 298, in get_last_fits
+FileNotFoundError: [Errno 2] No such file or directory: '/data/pucheros_sci/2023-01-09'
+2023-01-10 07:51:04,985 - rsync[4701][139961925883456] - INFO - Starting process 'rsync'
+2023-01-10 07:51:05,037 - rsync[4701][139961925883456] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2023-01-10', '/data/pucheros_sci/']
+2023-01-10 07:55:02,273 - rsync[8764][140108992861760] - INFO - Starting process 'rsync'
+2023-01-10 07:55:02,273 - rsync[8764][140108992861760] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2023-01-10', '/data/pucheros_sci/']
+2023-01-10 07:56:27,798 - rsync[10960][140059663652416] - INFO - Starting process 'rsync'
+2023-01-10 07:56:27,800 - rsync[10960][140059663652416] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2023-01-10', '/data/pucheros_sci/']
+2023-01-10 07:56:36,823 - rsync[10960][140059663652416] - INFO - Call command was successful
+2023-01-10 07:56:36,825 - rsync[10960][140059663652416] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2023-01-10/2023-01-10T06:55:57.517539-Bias.fits']
+2023-01-10 07:57:24,023 - rsync[10960][140059663652416] - INFO - command = ['rsync', '-a', 'pucherosmgr@192.168.224.115:/opt/PucherosPlus-Data/images/2023-01-10', '/data/pucheros_sci/']
+2023-01-10 07:57:32,034 - rsync[10960][140059663652416] - INFO - Call command was successful
+2023-01-10 07:57:32,035 - rsync[10960][140059663652416] - INFO - ['/usr/bin/xpaset', '-p', 'pucheros', 'file', '/data/pucheros_sci/2023-01-10/2023-01-10T06:56:55.880978-Comp.fits']
