@@ -1,0 +1,24 @@
+[Unit]
+Description=PucherosWebSocketServer
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+User=pucherosmgr
+Group=pucherosmgr
+Restart=always
+
+ExecStart=/home/pucherosmgr/.local/bin/gunicorn -k geventwebsocket.gunicorn.workers.GeventWebSocketWorker -w 1 PucherosWebSocketServer:app --bind 0.0.0.0:5000 --threads 12
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s TERM $MAINPID
+
+WorkingDirectory=/home/pucherosmgr/SOURCE/puchero_plus/GUI/backend
+Environment=PYTHONPATH='/opt/PucherosPlus/lib/python3/site-packages'
+Environment=INTROOT='/opt/PucherosPlus'
+Environment=INSROOT='/opt/PucherosPlus-Data'
+
+PrivateTmp=true
+RestartSec=10
+Restart=always

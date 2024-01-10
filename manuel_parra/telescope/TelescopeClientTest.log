@@ -1,0 +1,422 @@
+$ python3 TelescopeClientTest.py --config IceTelescopeASCOL.config
+Connecting to server...
+Config path: IceTelescopeASCOL.config
+Proxy=Telescope:default -h 192.168.224.101 -p 9999
+Connected to Telescope server
+Reading Telescope initial status
+Telescope error: dome or slit error
+Telescope initial status:
+{
+    "utc": "2022-08-30 16:53:16.876000+00:00",
+    "speed1": "3600.0",
+    "speed2": "500.0",
+    "speed3": "50.0",
+    "dec_screw_limit": "-19876429.65",
+    "dome_position": "183.8",
+    "focus_position": "12.62",
+    "correction_model": "4",
+    "global_state.telescope": "OFF",
+    "global_state.dome": "STOP",
+    "global_state.slit": "CLOSED",
+    "global_state.mirror_cover": "CLOSED",
+    "global_state.focus": "STOPPED",
+    "global_state.status_bits": "6269",
+    "global_state.error_bits": "4352",
+    "user_offsets.ra": "0.0",
+    "user_offsets.dec": "0.0",
+    "autoguider_offsets.ra": "0.0",
+    "autoguider_offsets.dec": "0.0",
+    "user_speeds.ra": "0.0",
+    "user_speeds.dec": "0.0",
+    "user_speeds.active": "0",
+    "coordinates.ra": "104536.264",
+    "coordinates.dec": "-300224.52",
+    "coordinates.position": "1",
+    "setpoint.ra": "102900.000",
+    "setpoint.dec": "-285400.00",
+    "setpoint.position": "1",
+    "axes.ha": "180.0425",
+    "axes.da": "-149.9599",
+    "meteo_status.humidity": "13 %",
+    "meteo_status.precipitation": "0",
+    "meteo_status.status_word": "4095",
+    "meteo_status.meteo_alarms": "2",
+    "meteo_status.wind_direction": "5 \u00b0",
+    "meteo_status.wind_speed": "12.2 m/s",
+    "meteo_status.brightness_east": "66487.0 kLux",
+    "meteo_status.brightness_north": "143913.0 kLux",
+    "meteo_status.brightness_west": "63564.0 kLux",
+    "meteo_status.brightness_south": "27667.0 kLux",
+    "meteo_status.brightness_max": "143913.0 kLux",
+    "meteo_status.temperature": "14.8 \u00b0C",
+    "meteo_status.atmospheric_pressure": "770.3 mbar",
+    "meteo_status.pyrgeometer": "-137.8 W/\u33a1",
+    "remote_mode": "ON",
+    "control_voltage": "OFF",
+    "ha_calibration": "CALIBRATED",
+    "da_calibration": "CALIBRATED",
+    "dome_calibration": "CALIBRATED",
+    "correction_refraction_state": "ON",
+    "correction_model_state": "ON",
+    "tracking": "OFF",
+    "dome_lamp": "OFF",
+    "vent_tube_state": "OFF",
+    "ha_lock": "UNLOCKED",
+    "da_lock": "UNLOCKED",
+    "dome_camera_power": "OFF",
+    "error_flag": "ON"
+}
+Initialize telescope and track the MOON
+Starting TCS initialize procedure
+Execute Control Voltage ON, cmd: GLCV 1, result: 1
+Telescope error: dome or slit error
+Telescope error: dome or slit error
+2022-08-30 18:53:19.976084: Waiting on error_flag => OFF
+Telescope error: dome or slit error
+2022-08-30 18:53:21.216389: Waiting on error_flag => OFF
+Telescope Alright
+Execute Telescope ON, cmd: TEON 1, result: 1
+Telescope Alright
+2022-08-30 18:53:24.232580: Waiting on NOT global_state.telescope => OFF
+Telescope Alright
+Execute Dome Automated, cmd: DOAM, result: 1
+Execute Set correction model to 4, cmd: TSCM 4, result: 1
+Execute Telescope Synchronization West, cmd: TESY 0, result: 1
+Telescope Alright
+Telescope Alright
+Telescope Alright
+2022-08-30 18:53:30.795658: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:32.036108: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:33.275708: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:34.516613: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:35.756552: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:36.996363: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:38.238149: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:39.477698: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:40.719343: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:41.960446: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:43.200297: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:44.439670: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:45.680134: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:46.920573: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:48.161832: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:49.403062: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:50.643524: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:51.882532: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:53.124337: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:54.363632: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:55.602217: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:56.843049: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:53:58.084272: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:02.950376: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:04.195461: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:05.922427: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:07.799472: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:09.616228: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:11.837279: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:13.088251: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:15.352086: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:17.529364: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:18.781712: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:20.069774: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:29.583153: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:32.202277: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:37.414897: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:38.693474: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:39.935410: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:41.176652: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:42.419039: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+2022-08-30 18:54:43.658474: Waiting on ha_calibration => CALIBRATED
+Telescope Alright
+Telescope Alright
+TCS initialize procedure is ready
+Starting TCS tracking to RA: 101000.0 DEC: -285400.0
+Execute Dome camera OFF, cmd: DOCO 0, result: 1
+Execute Dome lamp OFF, cmd: DOLO 0, result: 1
+Execute Telescope set RA/DEC West, cmd: TSRA 101000.0 -285400.0 1, result: 1
+Execute Telescope go RA/DEC, cmd: TGRA, result: 1
+Telescope Alright
+Execute Telescope set Guiding Mode On, cmd: TSGM 1, result: 1
+Telescope Alright
+2022-08-30 18:54:54.288191: Waiting on global_state.telescope => TRACK
+Telescope Alright
+2022-08-30 18:54:55.528512: Waiting on global_state.telescope => TRACK
+Telescope Alright
+2022-08-30 18:54:56.768557: Waiting on global_state.telescope => TRACK
+Telescope Alright
+2022-08-30 18:54:58.009094: Waiting on global_state.telescope => TRACK
+Telescope Alright
+2022-08-30 18:54:59.249476: Waiting on global_state.telescope => TRACK
+Telescope Alright
+2022-08-30 18:55:00.488830: Waiting on global_state.telescope => TRACK
+Telescope Alright
+Telescope Alright
+Telescope Alright
+Telescope Alright
+Telescope Alright
+Telescope Alright
+Telescope Alright
+Telescope Alright
+TCS start tracking source procedure is ready
+Reading Telescope status
+Telescope Alright
+Telescope initial status: {'utc': '2022-08-30 16:55:12.994000+00:00', 'speed1': '3600.0', 'speed2': '500.0', 'speed3': '50.0', 'dec_screw_limit': '10794731.84', 'dome_position': '267.9', 'focus_position': '12.616', 'correction_model': '4', 'global_state.telescope': 'TRACK', 'global_state.dome': 'AUTO_STOP', 'global_state.slit': 'CLOSED', 'global_state.mirror_cover': 'CLOSED', 'global_state.focus': 'STOPPED', 'global_state.status_bits': '6399', 'global_state.error_bits': '4096', 'user_offsets.ra': '0.0', 'user_offsets.dec': '0.0', 'autoguider_offsets.ra': '0.0', 'autoguider_offsets.dec': '0.0', 'user_speeds.ra': '0.0', 'user_speeds.dec': '0.0', 'user_speeds.active': '0', 'coordinates.ra': '101000.000', 'coordinates.dec': '-285400.00', 'coordinates.position': '1', 'setpoint.ra': '101000.000', 'setpoint.dec': '-285400.00', 'setpoint.position': '1', 'axes.ha': '188.8785', 'axes.da': '-150.7937', 'meteo_status.humidity': '14 %', 'meteo_status.precipitation': '0', 'meteo_status.status_word': '4095', 'meteo_status.meteo_alarms': '2', 'meteo_status.wind_direction': '15 °', 'meteo_status.wind_speed': '8.9 m/s', 'meteo_status.brightness_east': '65953.0 kLux', 'meteo_status.brightness_north': '143781.0 kLux', 'meteo_status.brightness_west': '64211.0 kLux', 'meteo_status.brightness_south': '28134.0 kLux', 'meteo_status.brightness_max': '143781.0 kLux', 'meteo_status.temperature': '14.9 °C', 'meteo_status.atmospheric_pressure': '770.5 mbar', 'meteo_status.pyrgeometer': '-139.1 W/㎡', 'remote_mode': 'ON', 'control_voltage': 'ON', 'ha_calibration': 'CALIBRATED', 'da_calibration': 'CALIBRATED', 'dome_calibration': 'CALIBRATED', 'correction_refraction_state': 'ON', 'correction_model_state': 'ON', 'tracking': 'ON', 'dome_lamp': 'OFF', 'vent_tube_state': 'OFF', 'ha_lock': 'UNLOCKED', 'da_lock': 'UNLOCKED', 'dome_camera_power': 'OFF', 'error_flag': 'OFF'}
+{
+    "utc": "2022-08-30 16:55:12.994000+00:00",
+    "speed1": "3600.0",
+    "speed2": "500.0",
+    "speed3": "50.0",
+    "dec_screw_limit": "10794731.84",
+    "dome_position": "267.9",
+    "focus_position": "12.616",
+    "correction_model": "4",
+    "global_state.telescope": "TRACK",
+    "global_state.dome": "AUTO_STOP",
+    "global_state.slit": "CLOSED",
+    "global_state.mirror_cover": "CLOSED",
+    "global_state.focus": "STOPPED",
+    "global_state.status_bits": "6399",
+    "global_state.error_bits": "4096",
+    "user_offsets.ra": "0.0",
+    "user_offsets.dec": "0.0",
+    "autoguider_offsets.ra": "0.0",
+    "autoguider_offsets.dec": "0.0",
+    "user_speeds.ra": "0.0",
+    "user_speeds.dec": "0.0",
+    "user_speeds.active": "0",
+    "coordinates.ra": "101000.000",
+    "coordinates.dec": "-285400.00",
+    "coordinates.position": "1",
+    "setpoint.ra": "101000.000",
+    "setpoint.dec": "-285400.00",
+    "setpoint.position": "1",
+    "axes.ha": "188.8785",
+    "axes.da": "-150.7937",
+    "meteo_status.humidity": "14 %",
+    "meteo_status.precipitation": "0",
+    "meteo_status.status_word": "4095",
+    "meteo_status.meteo_alarms": "2",
+    "meteo_status.wind_direction": "15 \u00b0",
+    "meteo_status.wind_speed": "8.9 m/s",
+    "meteo_status.brightness_east": "65953.0 kLux",
+    "meteo_status.brightness_north": "143781.0 kLux",
+    "meteo_status.brightness_west": "64211.0 kLux",
+    "meteo_status.brightness_south": "28134.0 kLux",
+    "meteo_status.brightness_max": "143781.0 kLux",
+    "meteo_status.temperature": "14.9 \u00b0C",
+    "meteo_status.atmospheric_pressure": "770.5 mbar",
+    "meteo_status.pyrgeometer": "-139.1 W/\u33a1",
+    "remote_mode": "ON",
+    "control_voltage": "ON",
+    "ha_calibration": "CALIBRATED",
+    "da_calibration": "CALIBRATED",
+    "dome_calibration": "CALIBRATED",
+    "correction_refraction_state": "ON",
+    "correction_model_state": "ON",
+    "tracking": "ON",
+    "dome_lamp": "OFF",
+    "vent_tube_state": "OFF",
+    "ha_lock": "UNLOCKED",
+    "da_lock": "UNLOCKED",
+    "dome_camera_power": "OFF",
+    "error_flag": "OFF"
+}
+Wheather initial status: {'humidity': 14, 'wind_direction': 15, 'wind_speed': 8.9, 'temperature': 14.9, 'atmospheric_pressure': 770.5}
+Stop source tracking and Shutdown telescope
+Starting TCS stop tracking source procedure
+Execute Telescope set Guiding Mode Off, cmd: TSGM 0, result: 1
+Execute Telescope Stop, cmd: TEST, result: 1
+Telescope Alright
+TCS stop tracking source procedure is ready
+Starting TCS shutdown procedure
+Execute Telescope Park, cmd: TEPA, result: 1
+Execute Flap Mirror Close, cmd: FMOP 0, result: 1
+Telescope Alright
+Execute Dome Slit Close, cmd: DOSO 0, result: 1
+Telescope Alright
+Execute Dome Park, cmd: DOPA, result: 1
+Telescope Alright
+2022-08-30 18:55:32.068274: Waiting on global_state.telescope => OFF
+Telescope Alright
+2022-08-30 18:55:33.310048: Waiting on global_state.telescope => OFF
+Telescope Alright
+2022-08-30 18:55:34.550684: Waiting on global_state.telescope => OFF
+Telescope Alright
+2022-08-30 18:55:35.793225: Waiting on global_state.telescope => OFF
+Telescope Alright
+2022-08-30 18:55:37.033497: Waiting on global_state.telescope => OFF
+Telescope Alright
+2022-08-30 18:55:38.273099: Waiting on global_state.telescope => OFF
+Telescope Alright
+2022-08-30 18:55:39.513006: Waiting on global_state.telescope => OFF
+Telescope Alright
+2022-08-30 18:55:40.755888: Waiting on global_state.telescope => OFF
+Telescope Alright
+2022-08-30 18:55:41.997661: Waiting on global_state.telescope => OFF
+Telescope Alright
+2022-08-30 18:55:43.238597: Waiting on global_state.telescope => OFF
+Telescope Alright
+Telescope Alright
+2022-08-30 18:55:44.721026: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:55:45.961197: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:55:47.204059: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:55:48.445267: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:55:49.686057: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:55:50.928933: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:55:52.168084: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:55:53.408432: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:55:54.649093: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:55:55.891257: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:55:57.132052: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:55:58.371995: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:55:59.613300: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:56:00.854458: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:56:02.092799: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:56:03.333502: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:56:04.575741: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:56:05.816787: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:56:07.058875: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:56:08.301006: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:56:09.542666: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:56:10.784275: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:56:12.024977: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:56:13.264865: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:56:14.502603: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:56:15.744381: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:56:16.984605: Waiting on global_state.dome => STOP
+Telescope Alright
+2022-08-30 18:56:18.225124: Waiting on global_state.dome => STOP
+Telescope Alright
+Execute Control Voltage OFF, cmd: GLCV 0, result: 1
+Telescope Alright
+TCS shutdown procedure is ready
+Telescope Alright
+Telescope initial status: {'utc': '2022-08-30 16:56:20.081000+00:00', 'speed1': '3600.0', 'speed2': '500.0', 'speed3': '50.0', 'dec_screw_limit': '-11256447.82', 'dome_position': '183.3', 'focus_position': '12.638', 'correction_model': '4', 'global_state.telescope': 'OFF', 'global_state.dome': 'STOP', 'global_state.slit': 'CLOSED', 'global_state.mirror_cover': 'CLOSED', 'global_state.focus': 'STOPPED', 'global_state.status_bits': '6269', 'global_state.error_bits': '4096', 'user_offsets.ra': '0.0', 'user_offsets.dec': '0.0', 'autoguider_offsets.ra': '0.0', 'autoguider_offsets.dec': '0.0', 'user_speeds.ra': '0.0', 'user_speeds.dec': '0.0', 'user_speeds.active': '0', 'coordinates.ra': '104849.904', 'coordinates.dec': '-290126.64', 'coordinates.position': '1', 'setpoint.ra': '101000.000', 'setpoint.dec': '-285400.00', 'setpoint.position': '1', 'axes.ha': '180.0011', 'axes.da': '-150.9759', 'meteo_status.humidity': '13 %', 'meteo_status.precipitation': '0', 'meteo_status.status_word': '4095', 'meteo_status.meteo_alarms': '2', 'meteo_status.wind_direction': '23 °', 'meteo_status.wind_speed': '11.6 m/s', 'meteo_status.brightness_east': '65274.0 kLux', 'meteo_status.brightness_north': '143650.0 kLux', 'meteo_status.brightness_west': '64464.0 kLux', 'meteo_status.brightness_south': '27676.0 kLux', 'meteo_status.brightness_max': '143650.0 kLux', 'meteo_status.temperature': '14.7 °C', 'meteo_status.atmospheric_pressure': '770.3 mbar', 'meteo_status.pyrgeometer': '-138.1 W/㎡', 'remote_mode': 'ON', 'control_voltage': 'OFF', 'ha_calibration': 'CALIBRATED', 'da_calibration': 'CALIBRATED', 'dome_calibration': 'CALIBRATED', 'correction_refraction_state': 'ON', 'correction_model_state': 'ON', 'tracking': 'OFF', 'dome_lamp': 'OFF', 'vent_tube_state': 'OFF', 'ha_lock': 'UNLOCKED', 'da_lock': 'UNLOCKED', 'dome_camera_power': 'OFF', 'error_flag': 'OFF'}
+{
+    "utc": "2022-08-30 16:56:20.081000+00:00",
+    "speed1": "3600.0",
+    "speed2": "500.0",
+    "speed3": "50.0",
+    "dec_screw_limit": "-11256447.82",
+    "dome_position": "183.3",
+    "focus_position": "12.638",
+    "correction_model": "4",
+    "global_state.telescope": "OFF",
+    "global_state.dome": "STOP",
+    "global_state.slit": "CLOSED",
+    "global_state.mirror_cover": "CLOSED",
+    "global_state.focus": "STOPPED",
+    "global_state.status_bits": "6269",
+    "global_state.error_bits": "4096",
+    "user_offsets.ra": "0.0",
+    "user_offsets.dec": "0.0",
+    "autoguider_offsets.ra": "0.0",
+    "autoguider_offsets.dec": "0.0",
+    "user_speeds.ra": "0.0",
+    "user_speeds.dec": "0.0",
+    "user_speeds.active": "0",
+    "coordinates.ra": "104849.904",
+    "coordinates.dec": "-290126.64",
+    "coordinates.position": "1",
+    "setpoint.ra": "101000.000",
+    "setpoint.dec": "-285400.00",
+    "setpoint.position": "1",
+    "axes.ha": "180.0011",
+    "axes.da": "-150.9759",
+    "meteo_status.humidity": "13 %",
+    "meteo_status.precipitation": "0",
+    "meteo_status.status_word": "4095",
+    "meteo_status.meteo_alarms": "2",
+    "meteo_status.wind_direction": "23 \u00b0",
+    "meteo_status.wind_speed": "11.6 m/s",
+    "meteo_status.brightness_east": "65274.0 kLux",
+    "meteo_status.brightness_north": "143650.0 kLux",
+    "meteo_status.brightness_west": "64464.0 kLux",
+    "meteo_status.brightness_south": "27676.0 kLux",
+    "meteo_status.brightness_max": "143650.0 kLux",
+    "meteo_status.temperature": "14.7 \u00b0C",
+    "meteo_status.atmospheric_pressure": "770.3 mbar",
+    "meteo_status.pyrgeometer": "-138.1 W/\u33a1",
+    "remote_mode": "ON",
+    "control_voltage": "OFF",
+    "ha_calibration": "CALIBRATED",
+    "da_calibration": "CALIBRATED",
+    "dome_calibration": "CALIBRATED",
+    "correction_refraction_state": "ON",
+    "correction_model_state": "ON",
+    "tracking": "OFF",
+    "dome_lamp": "OFF",
+    "vent_tube_state": "OFF",
+    "ha_lock": "UNLOCKED",
+    "da_lock": "UNLOCKED",
+    "dome_camera_power": "OFF",
+    "error_flag": "OFF"
+}
+Disconnecting from Telescope server...
